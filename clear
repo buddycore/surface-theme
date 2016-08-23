@@ -1,0 +1,30 @@
+[33mcommit b32e709c6d05e39b6df57052fe8bdcdb83aa2056[m
+Author: buddycore <social@buddycore.com>
+Date:   Tue Aug 23 04:42:12 2016 +0100
+
+    Modified both markup and style for sidebar
+
+[33mcommit d6b7c716ac3811fd54f166c4ab7c333d0a3dc27b[m
+Author: buddycore <social@buddycore.com>
+Date:   Tue Aug 23 04:34:12 2016 +0100
+
+    Updated Readme.md
+
+[33mcommit 8eec4bd5c656046b3da5ab8a42038f20d99401a6[m
+Merge: 15f9337 9ff0448
+Author: buddycore <social@buddycore.com>
+Date:   Tue Aug 23 04:20:14 2016 +0100
+
+    Merge branch 'master' of https://github.com/buddycore/surface-theme
+
+[33mcommit 15f9337bc29a02355fd9dbb6aa0df1cd04ab3ce3[m
+Author: buddycore <social@buddycore.com>
+Date:   Tue Aug 23 04:14:19 2016 +0100
+
+    Pre release commit with some things not working
+
+[33mcommit 9ff0448d21da90242229bbf25638307aab058552[m
+Author: buddycore <social@buddycore.com>
+Date:   Mon Aug 15 15:25:42 2016 +0100
+
+    Initial commit

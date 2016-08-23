@@ -1905,6 +1905,10 @@ aside.global div.tabs.thirds ul.tabs-nav li {
   width: 33.3333333%;
 }
 
+aside.global div.tabs.quarters ul.tabs-nav li {
+  width: 25%;
+}
+
 aside.global div.tabs {
   background: #FFF;
 }
@@ -1939,6 +1943,10 @@ aside.global div.tabs ul.tabs-nav li a:before {
   font-family: FontAwesome;
   font-size: 14px;
   font-weight: normal;
+}
+
+aside.global div.tabs ul.tabs-nav li.download a:before {
+  content: "\f019";
 }
 
 aside.global div.tabs ul.tabs-nav li.login a:before {

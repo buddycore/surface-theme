@@ -60,6 +60,14 @@ aside.global {
             }
         }
     }
+
+    div.tabs.quarters {
+        ul.tabs-nav {
+            li {
+                width: 25%;
+            }
+        }
+    }
     div.tabs {
         background: #FFF;
         ul.tabs-nav {
@@ -85,6 +93,13 @@ aside.global {
                         font-family: FontAwesome;
                         font-size: 14px;
                         font-weight: normal;
+                    }
+                }
+            }
+            li.download {
+                a {
+                    &:before {
+                        content: "\f019";
                     }
                 }
             }
