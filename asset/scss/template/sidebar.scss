@@ -53,6 +53,13 @@ aside.global {
             margin-top: 10px;
         }
     }
+    div.tabs.thirds {
+        ul.tabs-nav {
+            li {
+                width: 33.3333333%;
+            }
+        }
+    }
     div.tabs {
         background: #FFF;
         ul.tabs-nav {

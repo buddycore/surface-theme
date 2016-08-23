@@ -1901,6 +1901,10 @@ aside.global div.advert p:last-child {
   margin-top: 10px;
 }
 
+aside.global div.tabs.thirds ul.tabs-nav li {
+  width: 33.3333333%;
+}
+
 aside.global div.tabs {
   background: #FFF;
 }
