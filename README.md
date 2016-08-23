@@ -9,15 +9,8 @@ It has some simple but powerful configurations available to site administrators 
 ## What works and what doesn't?
 
 ### Works
-WordPress Posts
-WordPress Pages
-WordPress Customizer
-BuddyPress Activity
-BuddyPress Directories
-BuddyPress Members Component
-BuddyPress Groups Component
-BuddyPress Registration
-BuddyPress Activation
+WordPress Posts, WordPress Pages, WordPress Customizer, BuddyPress Activity, BuddyPress Directories, BuddyPress Members Component, 
+BuddyPress Groups Component, BuddyPress Registration, BuddyPress Activation.
 
 ### In Progress
 Sidebar needs some work
