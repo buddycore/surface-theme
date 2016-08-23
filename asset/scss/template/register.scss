@@ -1,0 +1,49 @@
+h6.main {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 1px solid palette(Grey, 400);
+    padding-bottom: 20px;
+    span {
+        display: block;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+div.pass-strength {
+    
+}
+div#pass-strength-result {
+    padding: 10px;
+    background: palette(Grey, 300);
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid palette(Grey, 400);
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: none;
+    &:before {
+        font-family: FontAwesome;
+        font-size: 14px;
+        float: left;
+        margin: -3px 5px 0 0;
+    }
+}
+div#pass-strength-result.short, div#pass-strength-result.bad, div#pass-strength-result.good, div#pass-strength-result.strong  {
+    display: block;
+}
+div#pass-strength-result.short {
+    color: palette(Orange, 500);
+    display: block;
+}
+div#pass-strength-result.bad {
+    color: palette(Red, 500);
+}
+div#pass-strength-result.good {
+    color: palette(Green, 500);
+}
+div#pass-strength-result.strong {
+    color: $members;
+}

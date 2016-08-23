@@ -1,0 +1,11 @@
+.one-half {
+    width: 50%;
+}
+
+
+
+@media screen and (max-width: 660px) {
+    .one-half {
+        width: 100%;
+    }
+}

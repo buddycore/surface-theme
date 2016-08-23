@@ -1,0 +1,26 @@
+body {
+  background: red !important;
+}
+
+ul#members-list li div.inner div.table {
+  display: table;
+}
+
+ul#members-list li div.inner div.table div.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+ul#members-list li div.inner div.table div.avatar {
+  width: 100px;
+}
+
+ul#members-list li div.inner div.table div.avatar a img {
+  padding: 2px;
+  border: 1px solid palette(Grey, 400);
+  background: #FFF;
+}
+
+div.bp-pagination {
+  display: none;
+}

@@ -1,0 +1,38 @@
+
+header.title {
+    font-size: 10px;
+    padding: 10px;
+    background: palette(Green, 100);
+    border: 1px solid palette(Green, 300);
+    color: palette(Green, 700);
+    text-transform: uppercase;
+    line-height: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+}
+
+article.result {
+    width: 100%;
+    padding: 10px;
+    div.inner {
+        padding: 20px;
+        background: #FFF;
+        h2 {
+            margin-bottom: 10px;
+            line-height: 22px;
+        }
+        div.excerpt {
+            margin-bottom: 20px;
+            line-height: 24px;
+        }
+        p.view {
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+    }    
+}

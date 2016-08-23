@@ -1,0 +1,30 @@
+body.page-template-sidebar-left {
+    div.main-col {
+        float: right;
+        width: 72%;
+    }
+
+    aside.global {
+        float: left;
+        width: 28%;
+        padding-right: 20px;
+        padding-left: 0;
+    }
+
+    @media screen and (max-width: 1023px) {
+        div.main-col {
+            width: 100%;
+        }
+        aside.global {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            div.widget {
+                display: none;
+            }
+            div.widget.advert {
+                display: block;
+            }
+        }
+    }
+}

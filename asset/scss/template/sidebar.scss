@@ -1,0 +1,369 @@
+aside.global.fixed {
+    position: fixed;
+    top: 20px;
+}
+
+aside.global {
+    div.widgets {
+
+    }
+    div.widget {
+        margin-bottom: 20px;
+    }
+    div.widget:last-child {
+        margin-bottom: 0;
+    }
+    div.advert {
+        background: palette(Grey, 400);
+        padding: 30px;
+        text-align: center;
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 22px;
+            font-size: 12px;
+            i {
+                font-size: 10px;
+                text-align: center;
+                margin: 0 2px;
+                padding: 0;
+            }
+            button {
+                padding: 0 15px;
+                height: 40px;
+                line-height: 40px;
+                color: rgba(255, 255, 255, .5);
+            }
+        }
+        p.under {
+            font-size: 10px;
+            text-transform: uppercase;
+            opacity: .75;
+            font-weight: 700;
+        }
+        p.text {
+            font-size: 12px;
+            color: palette(Grey, 600);
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        p:last-child {
+            margin-top: 10px;
+        }
+    }
+    div.tabs {
+        background: #FFF;
+        ul.tabs-nav {
+            height: 40px;
+            background: palette(Grey, 300);
+            line-height: 40px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            li {
+                float: left;
+                width: 16.66666667%;
+                a {
+                    padding: 0 15px;
+                    display: block;
+                    color: palette(Grey, 600);
+                    font-weight: 400;
+                    text-align: center;
+                    span {
+                        display: none;
+                    }
+                    &:before {
+                        font-family: FontAwesome;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                }
+            }
+            li.login {
+                a {
+                    &:before {
+                        content: "\f13e";
+                    }
+                }
+            }
+            li.actions {
+                a {
+                    &:before {
+                        content: "\f024";
+                    }
+                }
+            }
+            li.categories {
+                a {
+                    &:before {
+                        content: "\f07c";
+                    }
+                }
+            }
+            li.tags {
+                a {
+                    &:before {
+                        content: "\f02c";
+                    }
+                }
+            }
+            li.bp-members {
+                a {
+                    &:before {
+                        content: "\f007";
+                    }
+                }
+            }
+            li.bp-groups {
+                a {
+                    &:before {
+                        content: "\f0c0";
+                    }
+                }
+            }
+            li.social {
+                a {
+                    &:before {
+                        content: "\f1e0";
+                    }
+                }
+            }
+            li.ui-state-active {
+                a{
+                    background: #FFF;
+                    font-weight: 700;
+                }
+            }
+        }
+        div.tabs-panel {
+            padding: 20px;
+            display: none;
+            overflow-y: hidden;
+            width: 100%;
+            h3 {
+                margin-bottom: 20px;
+                font-style: normal;
+                font-size: 14px;
+            }
+        }
+        div.tabs-panel.login {
+            form {
+                fieldset {
+                    p.status {
+                        display: none;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        margin-bottom: 20px;
+                        font-weight: 700;
+                        &:before {
+                            font-family: FontAwesome;
+                            font-size: 14px;
+                            float: left;
+                            margin: -3px 5px 0 0;
+                            content: "\f05a";
+                            font-weight: normal;
+                        }
+                    }
+                    label {
+                        display: block;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+                    input {
+                        width: 100%;
+                        background: palette(Grey, 300);
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border: 1px solid palette(Grey, 400);
+                    }
+                    a {
+                        height: 30px;
+                        line-height: 30px;
+                        text-transform: uppercase;
+                        font-size: 10px;
+                    }
+                    button {
+                        float: right;
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 0 15px;
+                        color: rgba(255, 255, 255, .5);
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 10px;
+
+                    }
+                    button.loading {
+                        &:before {
+                            width: 30px;
+                            height: 30px;
+                            float: left;
+                            content: "";
+                            margin: 0 10px 0 -15px;
+                            background-color: #FFF !important;
+                            background-image: url(../img/interface/rolling.gif) !important;
+                            background-repeat: no-repeat !important;
+                            background-position: center !important;
+                        }
+                    }
+                }
+            }
+            div.summary {
+                line-height: 20px;
+                font-size: 12px;
+                font-style: italic;
+                p {
+                    margin-bottom: 20px;
+                }
+                p:last-child {
+                    margin-bottom: 0;
+                }
+                ul.rating {
+                    li {
+                        float: left;
+                        font-style: normal;
+                        margin-right: 5px;
+                        span {
+                            display: none;
+                        }
+                        &:before {
+                            content: "\f005";
+                            font-family: FontAwesome;
+                            font-size: 18px;
+                            color: palette(Orange, 500);
+                        }
+                    }
+                }
+            }
+        }
+        div.tabs-panel.categories {
+            ul {
+                margin: -10px 0;
+                li {
+                    a {
+                        padding: 10px 0;
+                        display: block;
+                        font-weight: 700;
+                    }
+                    ul {
+                        margin: 0;
+                        li {
+                            position: relative;
+                            a {
+                                &:before {
+                                    content: "\f115";
+                                    float: left;
+                                    font-family: FontAwesome;
+                                    font-size: 14px;
+                                    margin: -1px 10px 0 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                li:last-child {
+                    margin-bottom: 0;
+                    border-bottom: none;
+                }
+            }
+        }
+        div.tags {
+            h3 {
+                text-align: left;
+            }
+            div.tag-cloud {
+                margin: -5px 0;
+                a {
+                    display: inline-block;
+                    margin: 5px;
+                }
+            }            
+        }
+        div.bp-members, div.bp-groups {
+            ul {
+                margin: -10px;
+                overflow-y: hidden;
+                li {
+                    float: left;
+                    padding: 5px;
+                    width: 25%;
+                    a {
+                        width: 100%;
+                        img {
+                            opacity: .75;
+                            transition: .2s linear opacity;
+                            display: block;
+                        }
+                    }
+                    a:hover, a:active {
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        div.social {
+            ul {
+                li:last-child {
+                    margin-bottom: 0;
+                }
+                li {
+                    clear: both;
+                    margin-bottom: 10px;
+                    a {
+                        line-height: 30px;
+                        font-size: 12px;
+                        display: block;
+                        &:before {
+                            font-size: 14px;
+                            height: 30px;
+                            width: 30px;
+                            text-align: center;
+                            line-height: 30px;
+                            float: left;
+                            margin-right: 10px;
+                            background: palette(Grey, 400);
+                            color: palette(Grey, 700);
+                            font-family: FontAwesome;
+                            opacity: .75;
+                        }
+                    }
+                }
+                li.twitter {
+                    a {
+                        &:before {
+                            content: "\f099";
+                        }
+                    }
+                }
+                li.facebook {
+                    a {
+                        &:before {
+                            content: "\f09a";
+                        }
+                    }
+                }
+                li.youtube {
+                    a {
+                        &:before {
+                            content: "\f16a";
+                        }
+                    }
+                }
+                li.github {
+                    a {
+                        &:before {
+                            content: "\f113";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

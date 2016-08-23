@@ -1,0 +1,24 @@
+Members
+    - Test Pagination Directory
+    # - Test Registration / Activation
+    # - Remove File Upload to activity post form (temporary)
+    # - Implement cover image background
+    - Style avatar upload
+    - Style cover upload
+    { Above are partial complete - need re-adjustments }
+    - Investigate default xprofile form field empty description conditional
+    { solved with :empty }
+    # - Setup test notifications
+    - Style unread / read notifications
+    # - Setup test messages
+    - Style inbox, sent, starred, notices layout
+    # - Fix overflow on checkbox in message compose
+    - Style single message thread
+    # - Setup friend connections / Requests  - Style
+    - Add markup for pagination in groups / friends / sites list of a member
+    # - Add padder and submit button for settings / general
+    - Style email settings
+    - Style profile visibility
+    - Style delete account page
+    # - Add friend button
+    - Update count for member actions
