@@ -1,5 +1,5 @@
+
 <?php do_action('bp_before_members_loop'); ?>
-<?php $id2 = trim($bp->loggedin_user->id); ?>
 
 <?php if(bp_get_current_member_type()) : ?>
 	<p class="current-member-type"><?php bp_current_member_type_message() ?></p>
@@ -12,6 +12,9 @@
 	<ul id="members-list" class="item-list">
 
 	<?php while(bp_members()) : bp_the_member(); ?>
+		
+		<?php $user_id = bp_get_member_user_id(); ?>
+		<?php $total_activity = count($wpdb->get_results("SELECT user_id FROM wp_bp_activity WHERE user_id = $user_id AND is_spam = 0 AND type != 'new_member'")); ?>
 
 		<li <?php bp_member_class(); ?>>
 			<div class="inner">
@@ -27,7 +30,7 @@
 				</div>
 				<div class="meta">
 					<ul>
-						<li class="updates">75 updates</li>
+						<li class="updates"><?php echo $total_activity; if($total_activity === 1) : echo ' update'; else : echo ' updates'; endif; ?></li>
 						<li class="view"><a href="<?php bp_member_permalink(); ?>">Visit Profile</a></li>
 					</ul>
 				</div>
