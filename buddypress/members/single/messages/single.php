@@ -46,13 +46,15 @@
 
 		<form id="send-reply" action="<?php bp_messages_form_action(); ?>" method="post" class="standard-form">
 			<div class="padder">
-				<div class="row">
-					<div class="column">
-						<div class="editfield">
-							<?php do_action('bp_before_message_reply_box'); ?>
-							<label for="message_content" class="bp-screen-reader-text"><?php _e('Reply to Message', 'buddypress'); ?></label>
-							<textarea name="content" id="message_content" rows="15" cols="40"></textarea>
-							<?php do_action('bp_after_message_reply_box'); ?>
+				<div class="rows">
+					<div class="row">
+						<div class="column">
+							<div class="editfield">
+								<?php do_action('bp_before_message_reply_box'); ?>
+								<label for="message_content" class="bp-screen-reader-text"><?php _e('Reply to Message', 'buddypress'); ?></label>
+								<textarea name="content" id="message_content" rows="15" cols="40"></textarea>
+								<?php do_action('bp_after_message_reply_box'); ?>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -26,6 +26,18 @@ function sc_get_user_updates($user_id) {
 
 }
 
+function sc_get_profile_percent($user_id) {
+
+    global $wpdb;
+
+    $total_rows = count($wpdb->get_results("SELECT DISTINCT object_id FROM wp_bp_xprofile_meta")) ? : 1;
+    $total_completed = count($wpdb->get_results("SELECT DISTINCT field_id FROM wp_bp_xprofile_data WHERE user_id = $user_id")) - 1 ? : 1;
+    $percentage = number_format($total_completed / $total_rows * 100, 0);
+
+    return $percentage . '&#37; complete profile';
+
+}
+
 function sc_uploadcare_activity($activity) {
 
     // print_r($_FILES);
