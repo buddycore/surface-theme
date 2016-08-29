@@ -2313,9 +2313,6 @@ div.navigation-tabs div.item-list-tabs.filter ul li select {
 }
 
 @media screen and (max-width: 700px) {
-  div#item-body div.navigation-tabs {
-    display: none;
-  }
   div.navigation-tabs {
     height: auto;
     background: transparent;
