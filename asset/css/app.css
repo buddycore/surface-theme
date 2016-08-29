@@ -3396,6 +3396,32 @@ div.messages article.message {
   margin-bottom: 20px;
 }
 
+div.messages article.message div.table {
+  display: table;
+  overflow-y: hidden;
+  margin-bottom: 20px;
+}
+
+div.messages article.message div.table div.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+div.messages article.message div.table div.avatar img {
+  padding: 1px;
+  border: 1px solid #BDBDBD;
+}
+
+div.messages article.message div.table div.detail {
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  div.messages article.message div.table div.table-cell {
+    vertical-align: top;
+  }
+}
+
 div.messages article.message h2 {
   margin-bottom: 10px;
   font-size: 18px;
@@ -3404,7 +3430,7 @@ div.messages article.message h2 {
 div.messages article.message p.from-to {
   font-size: 10px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  line-height: 14px;
 }
 
 div.messages article.message p.from-to img {

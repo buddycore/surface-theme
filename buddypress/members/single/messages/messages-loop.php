@@ -14,20 +14,26 @@
 
 					<article class="message <?php bp_message_css_class(); ?><?php if(bp_message_thread_has_unread()) : ?> unread<?php else: ?> read<?php endif; ?>">
 						
-						<h2><a href="<?php bp_message_thread_view_link(); ?>"><?php bp_message_thread_subject(); ?></a></h2>
-						<p class="from-to">
-						<?php if('sentbox' != bp_current_action()) : ?>
-								<?php bp_message_thread_avatar(array('width' => 25, 'height' => 25)); ?>
-								<span class="from"><?php _e('From:', 'buddypress'); ?></span> <?php bp_message_thread_from(); ?>
-								<?php bp_message_thread_total_and_unread_count(); ?>
-								<span class="activity"><?php bp_message_thread_last_post_date(); ?></span>
-						<?php else: ?>
-								<?php bp_message_thread_avatar(array('width' => 25, 'height' => 25)); ?>
-								<span class="to"><?php _e('To:', 'buddypress'); ?></span> <?php bp_message_thread_to(); ?>
-								<?php bp_message_thread_total_and_unread_count(); ?>
-								<span class="activity"><?php bp_message_thread_last_post_date(); ?></span>
-						<?php endif; ?>
-						</p>					
+						<div class="table">
+							<div class="table-cell avatar">
+								<?php bp_message_thread_avatar(array('width' => 50, 'height' => 50)); ?>
+							</div>
+							<div class="table-cell detail">
+								<h2><a href="<?php bp_message_thread_view_link(); ?>"><?php bp_message_thread_subject(); ?></a></h2>
+								<p class="from-to">
+								<?php if('sentbox' != bp_current_action()) : ?>sss
+										<span class="from"><?php _e('From:', 'buddypress'); ?></span> <?php bp_message_thread_from(); ?>
+										<?php bp_message_thread_total_and_unread_count(); ?>
+										<span class="activity"><?php bp_message_thread_last_post_date(); ?></span>
+								<?php else: ?>
+										<span class="to"><?php _e('To:', 'buddypress'); ?></span> <?php bp_message_thread_to(); ?>
+										<?php bp_message_thread_total_and_unread_count(); ?>
+										<span class="activity"><?php bp_message_thread_last_post_date(); ?></span>
+								<?php endif; ?>
+								</p>	
+							</div>
+						</div>
+										
 
 						<div class="thread-excerpt standardise"><?php bp_message_thread_excerpt(); ?></div>
 
