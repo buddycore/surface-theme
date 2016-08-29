@@ -14,6 +14,18 @@ function get_group_total_updates_count($group_id){
     return $total_updates;
 }
 
+function sc_get_user_updates($user_id) {
+
+    global $wpdb;
+
+    $total_activity = count($wpdb->get_results("SELECT user_id FROM wp_bp_activity WHERE user_id = $user_id AND is_spam = 0 AND type != 'new_member'"));
+
+    $tx = $total_activity === 1 ? 'update' : 'updates';
+
+    return $total_activity . ' ' . $tx;
+
+}
+
 function sc_uploadcare_activity($activity) {
 
     // print_r($_FILES);
