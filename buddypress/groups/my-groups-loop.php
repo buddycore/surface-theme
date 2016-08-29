@@ -35,7 +35,7 @@
 
 	<?php do_action('bp_after_directory_groups_list'); ?>
 
-	<div id="pag-bottom" class="pagination">
+	<div id="pag-bottom" class="bp-pagination">
 		<div class="pag-count" id="group-dir-count-bottom"><?php bp_groups_pagination_count(); ?></div>
 		<div class="pag-links" id="group-dir-pag-bottom"><?php bp_groups_pagination_links(); ?></div>
 	</div><!-- PAGINATION -->

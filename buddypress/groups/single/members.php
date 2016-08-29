@@ -23,7 +23,7 @@
 					</div>
 					<div class="meta">
 						<ul>
-							<li class="updates">75 updates</li>
+							<li class="updates"><?php echo sc_get_user_updates(bp_get_member_user_id()); ?></li>
 							<li class="view"><a href="<?php bp_member_permalink(); ?>">Visit Profile</a></li>
 						</ul>
 					</div>
