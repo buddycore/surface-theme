@@ -2466,6 +2466,15 @@ form.activity-post-form div.uploadcare-widget div.uploadcare-widget-button:after
   font-size: 14px;
 }
 
+form.activity-post-form div.posting-in {
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-size: 10px;
+  float: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 form.activity-post-form div#whats-new-options {
   display: block !important;
   float: right;
