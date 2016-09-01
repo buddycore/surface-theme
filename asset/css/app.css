@@ -1039,17 +1039,17 @@ form.standard-form input {
 }
 
 form.standard-form select {
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
   padding: 0 0 0 5px;
   border: 1px solid #BDBDBD;
   font-size: 12px;
 }
 
 form.standard-form button, form.standard-form input#send, form.standard-form input#profile-group-edit-submit, form.standard-form input#signup_submit, form.standard-form input.submit, form.standard-form input#save, form.standard-form input#delete-group-button {
-  height: 40px;
-  line-height: 40px;
-  padding: 0 15px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   font-weight: 700;

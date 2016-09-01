@@ -318,16 +318,16 @@ form.standard-form {
         width: 100% !important;
     }
     select {
-        height: 40px;
-        line-height: 40px;
+        height: 30px;
+        line-height: 30px;
         padding: 0 0 0 5px;
         border: 1px solid palette(Grey, 400);
         font-size: 12px;
     }
     button, input#send, input#profile-group-edit-submit, input#signup_submit, input.submit, input#save, input#delete-group-button {
-        height: 40px;
-        line-height: 40px;
-        padding: 0 15px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
         color: rgba(255, 255, 255, .5);
         text-transform: uppercase;
         font-weight: 700;
