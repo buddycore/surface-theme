@@ -2475,8 +2475,8 @@ form.activity-post-form div.uploadcare-widget div.uploadcare-widget-button:after
 }
 
 form.activity-post-form div.posting-in {
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
   text-transform: uppercase;
   font-size: 10px;
   float: right;
