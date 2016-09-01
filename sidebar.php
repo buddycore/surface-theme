@@ -1,7 +1,8 @@
 <aside class="global">
     <div class="widgets">
-        <div class="widget tabs thirds">
+        <div class="widget tabs quarters">
             <ul class="tabs-nav">
+                <li class="download"><a href="#t0"><span>Download</span></a></li>
                 <?php if(!is_user_logged_in()) : ?>
                     <li class="login"><a href="#t1"><span>Login</span></a></li>
                 <?php else : ?>
@@ -10,6 +11,9 @@
                 <li class="categories"><a href="#t2"><span>Categories</span></a></li>
                 <li class="tags"><a href="#t3"><span>Tag Cloud</span></a></li>
             </ul>
+            <div class="tabs-panel download" id="t0">
+                <p><a href="">Download this theme on Github</a></p>
+            </div>
             <div class="tabs-panel login" id="t1">
                 <?php if(!is_user_logged_in()) : ?>
                 <form action="#" method="post" id="login">
