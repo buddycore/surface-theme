@@ -43,6 +43,7 @@ div.section-header {
                     background: rgba(255, 255, 255, .75);
                     border: 1px solid #FFF;
                     float: left;
+                    width: 100%;
                 }
                 div.title {
                     h2 {
@@ -71,6 +72,12 @@ div.section-header {
                             border-bottom: 1px solid palette(Grey, 400);
                             color: palette(Grey, 600);
                         }
+                    }
+                }
+                div.generic-button.send-message {
+                    a:before {
+                        content: "\f0e0";
+                        margin: -3px 5px 0 0;
                     }
                 }
                 ul.info {
@@ -131,6 +138,9 @@ div.section-header {
                     img {
                         
                     }
+                }
+                div.table-cell {
+                    vertical-align: top;
                 }
                 div#item-buttons {
                     

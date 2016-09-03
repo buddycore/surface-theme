@@ -37,7 +37,10 @@ $cover_img = bp_attachments_get_attachment('url', array(
 						<li><a href="<?php bp_displayed_user_link(); ?>friends"><?php echo friends_get_total_friend_count(); if(friends_get_total_friend_count() === 0 || friends_get_total_friend_count() > 1) : echo ' Friends'; else : echo ' Friend'; endif; ?></a></li>
 						<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo groups_get_total_group_count(); if(groups_get_total_group_count() === 0 || groups_get_total_group_count() > 1) : echo ' Groups'; else : echo ' Group'; endif; ?></a></li>
 					</ul>
-					<?php bp_add_friend_button(); ?>
+					<div class="profile-links">
+						<?php bp_add_friend_button(); ?>
+						<div class="generic-button send-message"><a href="#">Send Message</a></div>
+					</div>
 				</div>
 			</div>
 		</div>

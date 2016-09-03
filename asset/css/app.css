@@ -2853,6 +2853,7 @@ div.section-header div.details div.table div.info div.inner {
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid #FFF;
   float: left;
+  width: 100%;
 }
 
 div.section-header div.details div.table div.info div.title h2 {
@@ -2885,6 +2886,11 @@ div.section-header div.details div.table div.info div#item-buttons div.generic-b
   background: #E0E0E0;
   border-bottom: 1px solid #BDBDBD;
   color: #757575;
+}
+
+div.section-header div.details div.table div.info div.generic-button.send-message a:before {
+  content: "\f0e0";
+  margin: -3px 5px 0 0;
 }
 
 div.section-header div.details div.table div.info ul.info {
@@ -2943,6 +2949,9 @@ div.section-header div.details div.info-contain ul.info {
   }
   div.section-header div.details div.table div.avatar {
     width: 30%;
+  }
+  div.section-header div.details div.table div.table-cell {
+    vertical-align: top;
   }
   div.section-header div.details div.table div.info {
     padding: 0 0 0 10px;
