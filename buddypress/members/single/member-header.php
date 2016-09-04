@@ -1,80 +1,85 @@
+<?php
+global $bp, $wpdb;
+$user_id = $bp->displayed_user->id;
+
+
+$cover_img = bp_attachments_get_attachment('url', array(
+    'item_id' => bp_displayed_user_id()
+));
+?>
+
 <?php do_action('bp_before_member_header'); ?>
-<div class="component-header">
 
-	<div id="item-header-avatar" class="table-cell">
-		<a href="<?php bp_displayed_user_link(); ?>"><?php bp_displayed_user_avatar('type=full&width=200'); ?></a>
-		<?php if(bp_is_my_profile()) : ?>
-			<a href="<?php echo bp_loggedin_user_domain(); ?>profile/change-avatar" class="change-avatar">
-				<span class="table">
-					<span class="table-cell">
-						<span class="icon"></span>
-						<span class="text">Change Profile Avatar</span>
-					</span>
-				</span>
-			</a>
-		<?php endif; ?>
-	</div><!-- #item-header-avatar -->
+<div class="section-header"<?php if(!empty($cover_img)) : echo ' style="background-image: url('.$cover_img.');"'; endif; ?>>
 
-	<div id="item-header-content" class="table-cell">
+	<?php do_action('bp_before_member_header'); ?>
 
-		<div class="inner">
+	<div class="details">
 
-			<div class="title">
-				<?php if(bp_is_active('activity') && bp_activity_do_mentions()) : ?>
-					<h2 class="user-nicename"><a href="<?php bp_displayed_user_link(); ?>">@<?php bp_displayed_user_mentionname(); ?></a></h2>
-				<?php endif; ?>
+		<div class="table">
 
-				<p class="activity"><?php bp_last_activity(bp_displayed_user_id()); ?></p>
+			<div class="table-cell avatar">
+				<a href="<?php bp_displayed_user_link(); ?>"><?php bp_displayed_user_avatar('type=full&width=200'); ?></a>
 			</div>
 
-			<?php do_action('bp_before_member_header_meta'); ?>
+			<div class="table-cell info">
+				<div class="inner">
+					<div class="title">
+						<?php if(bp_is_active('activity') && bp_activity_do_mentions()) : ?>
+							<h2><a href="<?php bp_displayed_user_link(); ?>">@<?php bp_displayed_user_mentionname(); ?></a></h2>
+						<?php endif; ?>
+						<p><?php bp_last_activity(bp_displayed_user_id()); ?></p>
+					</div>
 
-			<div id="item-meta">
-
-				<?php
-				global $bp, $wpdb;
-				$user_id = $bp->displayed_user->id;
-				$total_rows = count($wpdb->get_results("SELECT DISTINCT object_id FROM wp_bp_xprofile_meta"));
-				$total_completed = count($wpdb->get_results("SELECT DISTINCT field_id FROM wp_bp_xprofile_data WHERE user_id = $user_id")) - 1; // Minus one for Base profile field.
-				$percentage = number_format($total_completed / $total_rows * 100, 0);
-
-				$total_activity = count($wpdb->get_results("SELECT user_id FROM wp_bp_activity WHERE user_id = $user_id AND is_spam = 0 AND type != 'new_member'"));
-				# Maybe update DOM count via jQuery if an item is deleted whilst on user profile
-				?>
-
-				<ul class="info">
+					<ul class="info">
 					<?php if(bp_is_active('xprofile')) : ?>
-					<li><a href="<?php bp_displayed_user_link(); ?>profile"><?php echo $percentage; ?>% complete profile</a></li>
+						<li><a href="<?php bp_displayed_user_link(); ?>profile"><?php echo sc_get_profile_percent($user_id); ?></a></li>
 					<?php endif; ?>
 					<?php if(bp_is_active('activity')) : ?>
-					<li><a href="<?php bp_displayed_user_link(); ?>"><?php echo $total_activity; ?> update(s)</a></li>
-					<?php endif; ?>	
+						<li><a href="<?php bp_displayed_user_link(); ?>"><?php echo sc_get_user_updates($user_id); ?></a></li>
+					<?php endif; ?>
 					<?php if(bp_is_active('friends')) : ?>
-					<li><a href="<?php bp_displayed_user_link(); ?>friends"><?php echo friends_get_total_friend_count(); ?> sss</a></li>
+						<li><a href="<?php bp_displayed_user_link(); ?>friends"><?php echo friends_get_total_friend_count(); if(friends_get_total_friend_count() === 0 || friends_get_total_friend_count() > 1) : echo ' Friends'; else : echo ' Friend'; endif; ?></a></li>
 					<?php endif; ?>
 					<?php if(bp_is_active('groups')) : ?>
-					<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo bp_get_group_total_for_member($user_id); ?> group(s)</a></li>
+						<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo groups_get_total_group_count(); if(groups_get_total_group_count() === 0 || groups_get_total_group_count() > 1) : echo ' Groups'; else : echo ' Group'; endif; ?></a></li>
 					<?php endif; ?>
-					<?php if(class_exists('bbPress')) : ?>
-					<li><a href="#">xx Forum Posts</a></li>
-					<?php endif; ?>
-					<?php if(bp_is_active('blogs')) : ?>
-					<li><a href="<?php bp_displayed_user_link(); ?>blogs">xx Sites</a></li>
-					<?php endif; ?>
-				</ul>
+					</ul>
+					<div class="profile-links">
+						<?php if(bp_is_active('friends')) : ?>
+							<?php bp_add_friend_button(); ?>
+						<?php endif; ?>
+						<?php if(bp_is_active('messages')) : ?>
+							<div class="generic-button send-message"><a href="<?php bp_loggedin_user_link(); ?>messages/compose/?to=<?php bp_displayed_user_mentionname(); ?>">Send Message</a></div>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+		</div>
 
-				<?php if(!bp_is_my_profile() && is_user_logged_in()) : ?>
-					<div id="item-buttons"><?php do_action('bp_member_header_actions'); ?></div><!-- #item-buttons -->
+		<?php do_action('bp_before_member_header_meta'); ?>		
+
+		<div class="info-contain">
+			<ul class="info">
+				<?php if(bp_is_active('xprofile')) : ?>
+					<li><a href="<?php bp_displayed_user_link(); ?>profile"><?php echo sc_get_profile_percent($user_id); ?></a></li>
 				<?php endif; ?>
+				<?php if(bp_is_active('activity')) : ?>
+					<li><a href="<?php bp_displayed_user_link(); ?>"><?php echo sc_get_user_updates($user_id); ?></a></li>
+				<?php endif; ?>
+				<?php if(bp_is_active('friends')) : ?>
+					<li><a href="<?php bp_displayed_user_link(); ?>friends"><?php echo friends_get_total_friend_count(); if(friends_get_total_friend_count() === 0 || friends_get_total_friend_count() > 1) : echo ' Friends'; else : echo ' Friend'; endif; ?></a></li>
+				<?php endif; ?>
+				<?php if(bp_is_active('groups')) : ?>
+					<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo groups_get_total_group_count(); if(groups_get_total_group_count() === 0 || groups_get_total_group_count() > 1) : echo ' Groups'; else : echo ' Group'; endif; ?></a></li>
+				<?php endif; ?>
+			</ul>
+		</div>
 
-				<?php do_action('bp_profile_header_meta'); ?>
+		<?php do_action('bp_profile_header_meta'); ?>
 
-			</div><!-- #item-meta -->
-
-		</div><!-- INNER -->
-
-	</div><!-- #item-header-content -->
+	</div><!-- DETAILS -->
 
 	<?php do_action('bp_after_member_header'); ?>
 
-</div>
+</div><!-- SECTIoN HEADER -->

@@ -1,53 +1,58 @@
-<?php do_action('bp_before_member_header'); ?>
-<div class="component-header group">
+<?php
+$cover_img = bp_attachments_get_attachment('url', array(
+    'object_dir' => 'groups',
+    'item_id' => bp_get_group_id(),
+));
+if(empty($cover_img)) :
+    $cover_img = get_bloginfo('template_directory').'/asset/img/default/group-cover.png';
+endif;
+?>
 
-	<div id="item-header-avatar" class="table-cell">
-		<?php if(!bp_disable_group_avatar_uploads()) : ?>
-			<a href="<?php echo esc_url(bp_get_group_permalink()); ?>"><?php bp_group_avatar(); ?></a>
-			<?php if(bp_group_is_admin()) : ?>
-				<a href="<?php echo esc_url(bp_get_group_permalink()); ?>admin/group-avatar" class="change-avatar">
-					<span class="table">
-						<span class="table-cell">
-							<span class="icon"></span>
-							<span class="text">Change Group Avatar</span>
-						</span>
-					</span>
-				</a>
-			<?php endif; ?>
-		<?php endif; ?>	
-	</div><!-- #item-header-avatar -->
 
-	<div id="item-header-content" class="table-cell">
+<div class="section-header"<?php if(!empty($cover_img)) : echo ' style="background-image: url('.$cover_img.');"'; endif; ?>>
+<?php do_action('bp_before_group_header'); ?>
 
-		<div class="inner">
+    <div class="details">
 
-			<div class="title">
-				<h2><a href="<?php bp_group_permalink(); ?>"><?php bp_group_name(); ?></a></h2>
+        <div class="table">
 
-				<p class="activity"><strong><?php bp_group_type(); ?></strong> / <?php printf(__('active %s', 'buddypress'), bp_get_group_last_active()); ?></p>
-			</div>
+            <div class="table-cell avatar">
+                <a href="<?php echo esc_url(bp_get_group_permalink()); ?>"><?php bp_group_avatar(); ?></a>
+            </div>
 
-			<?php do_action('bp_before_member_header_meta'); ?>
+            <div class="table-cell info">
+                <div class="inner">
+                    <div class="title">
+                        <h2><a href="<?php bp_group_permalink(); ?>"><?php bp_group_name(); ?></a></h2>
+                        <p><strong><?php bp_group_type(); ?></strong> / <?php printf(__('active %s', 'buddypress'), bp_get_group_last_active()); ?></p>
+                    </div>
 
-			<div id="item-meta">
+                    <ul class="info">
+                        <?php if(bp_is_active('activity')) : ?>
+                            <li><a href="<?php bp_group_permalink(); ?>/activity"><?php echo get_group_total_updates_count(bp_get_group_id()); ?> Updates</a></li>   
+                        <?php endif; ?>
+                        <li><a href="<?php bp_group_permalink(); ?>/memebers"><?php echo bp_get_group_total_members(); ?> Member</a></li>                     
+                    </ul>                    
 
-				<ul class="info">
-					<li><a href="#">XX Updates</a></li>
-					<li><a href="#">XX Member</a></li>
-				</ul>
+                    <?php if(!bp_group_is_admin()) : ?>
+                        <?php do_action('bp_group_header_actions'); ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
 
-				<?php if(!bp_group_is_admin()) : ?>
-					<div id="item-buttons"><?php do_action('bp_group_header_actions'); ?>	</div><!-- #item-buttons -->
-				<?php endif; ?>
 
-				<?php do_action('bp_profile_header_meta'); ?>
+        <div class="info-contain">
+            <ul class="info">
+                <?php if(bp_is_active('activity')) : ?>
+                    <li><a href="<?php bp_group_permalink(); ?>/activity"><?php echo get_group_total_updates_count(bp_get_group_id()); ?> Updates</a></li>   
+                <?php endif; ?>
+                <li><a href="<?php bp_group_permalink(); ?>/memebers"><?php echo bp_get_group_total_members(); ?> Member</a></li>                     
+            </ul>
+        </div>
 
-			</div><!-- #item-meta -->
 
-		</div><!-- INNER -->
+    </div><!-- DETAILS -->
 
-	</div><!-- #item-header-content -->
-
-	<?php do_action('bp_after_member_header'); ?>
-
-</div>
+    <?php do_action('bp_after_group_header'); ?>
+</div><!-- SECTIoN HEADER -->
