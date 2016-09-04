@@ -3,6 +3,8 @@
 
 	<?php do_action('bp_before_messages_compose_content'); ?>
 
+	<div class="rows">
+
 	<div class="row">
 		<div class="column">
 			<div class="editfield">
@@ -42,6 +44,8 @@
 				<textarea name="content" id="message_content" rows="15" cols="40"><?php bp_messages_content_value(); ?></textarea>
 			</div>
 		</div>
+	</div>
+
 	</div>
 
 	<input type="hidden" name="send_to_usernames" id="send-to-usernames" value="<?php bp_message_get_recipient_usernames(); ?>" class="<?php bp_message_get_recipient_usernames(); ?>" />

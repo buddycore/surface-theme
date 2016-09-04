@@ -10,7 +10,6 @@ locate_template('/asset/php/bp/init.buddypress.php', true, true);
 locate_template('/asset/php/bp/fns.buddypress.php', true, true);
 
 locate_template('/asset/php/bp/class.upload.php', true, true);
-locate_template('/asset/php/bp/upload.attach.php', true, true);
 // locate_template('/asset/php/wp/wp-login.php', true, true);
 
 function asset_url($path) {
