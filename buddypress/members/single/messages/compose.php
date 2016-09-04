@@ -7,7 +7,7 @@
 		<div class="column">
 			<div class="editfield">
 				<label for="send-to-input">To <span>(username)</span></label>
-				<input type="text" name="send-to-input" class="send-to-input" id="send-to-input" <?php if($_GET['r']) : echo ' value="'.$_GET['r'].'"'; endif; ?> />
+				<input type="text" name="send-to-input" class="send-to-input" id="send-to-input" <?php if($_GET['to']) : echo ' value="'.$_GET['to'].'"'; endif; ?> />
 			</div>	
 		</div>
 	</div>

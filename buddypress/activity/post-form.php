@@ -31,6 +31,7 @@
 				<button type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit"><?php esc_attr_e('Post Update', 'buddypress'); ?></button>
 			</div><!-- SUBMIT -->
 
+			<?php if(bp_is_active('groups')) : ?>
 			<div id="whats-new-post-in-box">
 				<select id="whats-new-post-in" name="whats-new-post-in">
 					<option selected="selected" value="0"><?php _e('Post in: My Profile', 'buddypress'); ?></option>
@@ -41,6 +42,7 @@
 					<?php endif; ?>
 				</select>
 			</div><!-- POST IN -->
+			<?php endif; ?>
 
 			<?php do_action('bp_activity_post_form_options'); ?>
 

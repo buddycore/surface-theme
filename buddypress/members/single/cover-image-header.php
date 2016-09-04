@@ -32,14 +32,26 @@ $cover_img = bp_attachments_get_attachment('url', array(
 					</div>
 
 					<ul class="info">
+					<?php if(bp_is_active('xprofile')) : ?>
 						<li><a href="<?php bp_displayed_user_link(); ?>profile"><?php echo sc_get_profile_percent($user_id); ?></a></li>
+					<?php endif; ?>
+					<?php if(bp_is_active('activity')) : ?>
 						<li><a href="<?php bp_displayed_user_link(); ?>"><?php echo sc_get_user_updates($user_id); ?></a></li>
+					<?php endif; ?>
+					<?php if(bp_is_active('friends')) : ?>
 						<li><a href="<?php bp_displayed_user_link(); ?>friends"><?php echo friends_get_total_friend_count(); if(friends_get_total_friend_count() === 0 || friends_get_total_friend_count() > 1) : echo ' Friends'; else : echo ' Friend'; endif; ?></a></li>
+					<?php endif; ?>
+					<?php if(bp_is_active('groups')) : ?>
 						<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo groups_get_total_group_count(); if(groups_get_total_group_count() === 0 || groups_get_total_group_count() > 1) : echo ' Groups'; else : echo ' Group'; endif; ?></a></li>
+					<?php endif; ?>
 					</ul>
 					<div class="profile-links">
-						<?php bp_add_friend_button(); ?>
-						<div class="generic-button send-message"><a href="#">Send Message</a></div>
+						<?php if(bp_is_active('friends')) : ?>
+							<?php bp_add_friend_button(); ?>
+						<?php endif; ?>
+						<?php if(bp_is_active('messages')) : ?>
+							<div class="generic-button send-message"><a href="<?php bp_loggedin_user_link(); ?>messages/compose/?to=<?php bp_displayed_user_mentionname(); ?>">Send Message</a></div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
@@ -49,10 +61,18 @@ $cover_img = bp_attachments_get_attachment('url', array(
 
 		<div class="info-contain">
 			<ul class="info">
-				<li><a href="<?php bp_displayed_user_link(); ?>profile"><?php echo sc_get_profile_percent($user_id); ?></a></li>
-				<li><a href="<?php bp_displayed_user_link(); ?>"><?php echo sc_get_user_updates($user_id); ?></a></li>
-				<li><a href="<?php bp_displayed_user_link(); ?>friends"><?php echo friends_get_total_friend_count(); if(friends_get_total_friend_count() === 0 || friends_get_total_friend_count() > 1) : echo ' Friends'; else : echo ' Friend'; endif; ?></a></li>
-				<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo groups_get_total_group_count(); if(groups_get_total_group_count() === 0 || groups_get_total_group_count() > 1) : echo ' Groups'; else : echo ' Group'; endif; ?></a></li>
+				<?php if(bp_is_active('xprofile')) : ?>
+					<li><a href="<?php bp_displayed_user_link(); ?>profile"><?php echo sc_get_profile_percent($user_id); ?></a></li>
+				<?php endif; ?>
+				<?php if(bp_is_active('activity')) : ?>
+					<li><a href="<?php bp_displayed_user_link(); ?>"><?php echo sc_get_user_updates($user_id); ?></a></li>
+				<?php endif; ?>
+				<?php if(bp_is_active('friends')) : ?>
+					<li><a href="<?php bp_displayed_user_link(); ?>friends"><?php echo friends_get_total_friend_count(); if(friends_get_total_friend_count() === 0 || friends_get_total_friend_count() > 1) : echo ' Friends'; else : echo ' Friend'; endif; ?></a></li>
+				<?php endif; ?>
+				<?php if(bp_is_active('groups')) : ?>
+					<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo groups_get_total_group_count(); if(groups_get_total_group_count() === 0 || groups_get_total_group_count() > 1) : echo ' Groups'; else : echo ' Group'; endif; ?></a></li>
+				<?php endif; ?>
 			</ul>
 		</div>
 
