@@ -6,8 +6,13 @@
 	<div class="row">
 		<div class="column">
 			<div class="editfield">
-				<label for="send-to-input">To <span>(username)</span></label>
-				<input type="text" name="send-to-input" class="send-to-input" id="send-to-input" <?php if($_GET['to']) : echo ' value="'.$_GET['to'].'"'; endif; ?> />
+				<label for="send-to-input"><?php _e("Send To (Username or Friend's Name)", 'buddypress' ); ?></label>
+				<ul class="first acfb-holder">
+					<li>
+						<?php bp_message_get_recipient_tabs(); ?>
+						<input type="text" name="send-to-input" class="send-to-input" id="send-to-input" <?php if($_GET['to']) : echo ' value="'.$_GET['to'].'"'; endif; ?> />
+					</li>
+				</ul>
 			</div>	
 		</div>
 	</div>

@@ -918,3 +918,58 @@ div.message-box {
         }
     }
 }
+
+div.ac_results {
+    display: block !important;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 200px;
+    border-radius: 0;
+    ul {
+        li {
+            font-size: 12px;
+            padding: 10px;
+            span {
+                
+            }
+            img {
+                float: left;
+            }
+            strong {
+                font-weight: normal;
+                color: #000;
+            }
+        }
+        li:hover, li:active, li.ac_over {
+            background: rgba(0, 0, 0, .25);
+        }
+    }
+}
+
+ul.first.acfb-holder {
+    li {
+        width: 100%;
+        li.friend-tab {
+            background: #FFF;
+            border: none;
+            border-radius: 0;
+            font-size: 10px;
+            text-transform: uppercase;
+            padding: 0;
+            margin: 10px 10px 10px 0;
+            float: left;
+            width: auto;
+            span {
+                float: left;
+                height: 15px;
+                line-height: 15px;
+                a {
+                    span, img {
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+}
