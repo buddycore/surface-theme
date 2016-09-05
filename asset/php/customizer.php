@@ -104,6 +104,6 @@ add_action('customize_register', 'sc_customizer');
 
 // Live mods in customizer via the following script
 function sc_customizer_script() {
-    wp_enqueue_script('sc-app-customizer', asset_url('js/jquery.customizer.js'), array('jquery'), '0.0.2', true);
+    wp_enqueue_script('sc-app-customizer', asset_url('js/jquery.customizer.js'), array('jquery'), '0.0.9', true);
 }
 add_action('customize_preview_init', 'sc_customizer_script');

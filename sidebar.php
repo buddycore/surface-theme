@@ -1,4 +1,5 @@
 <aside class="global">
+
     <div class="widgets">
         <div class="widget tabs quarters">
             <ul class="tabs-nav">

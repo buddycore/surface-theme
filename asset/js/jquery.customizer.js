@@ -8,15 +8,5 @@
             }
         });
     });
-
-    wp.customize('sf_primary_colour', function(v){
-        v.bind(function(nv) {
-            console.log(nv);
-            if(nv){
-                // Add styling to primary colour areas
-                // Header, Footer, Links, Buttons, Focus
-            }
-        });
-    });
  
 })(jQuery);
