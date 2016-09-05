@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     $('aside.global').theiaStickySidebar({
       // Settings
-      additionalMarginTop: 20
+      additionalMarginTop: 90
     });
 
     // TABS | SIDEBAR
