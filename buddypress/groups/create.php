@@ -60,17 +60,6 @@
 
 				<?php wp_nonce_field('groups_create_save_group-details'); ?>
 
-					<div class="prev-next">
-		
-						<?php /* Create Button */ ?>
-						<?php if(bp_is_first_group_creation_step()) : ?>
-
-							<input type="submit" value="<?php esc_attr_e('Create Group and Continue', 'buddypress'); ?>" id="group-creation-create" name="save" class="create-group" />
-
-						<?php endif; ?>
-
-					</div><!-- PREV NEXT -->
-
 				</div>
 
 			<?php endif; ?>
@@ -81,7 +70,6 @@
 				<div class="padder">
 
 				<?php do_action('bp_before_group_settings_creation_step'); ?>
-
 
 				<div class="radio-groups">
 
@@ -165,24 +153,6 @@
 
 				<?php wp_nonce_field('groups_create_save_group-settings'); ?>
 
-					<div class="prev-next">
-
-						<?php /* Previous Button */ ?>
-						<?php if(!bp_is_first_group_creation_step()) : ?>
-
-							<input type="button" value="<?php esc_attr_e('Back to Previous Step', 'buddypress'); ?>" id="group-creation-previous" name="previous" onclick="location.href='<?php bp_group_creation_previous_link(); ?>'" />
-
-						<?php endif; ?>
-
-						<?php /* Next Button */ ?>
-						<?php if(!bp_is_last_group_creation_step() && !bp_is_first_group_creation_step()) : ?>
-
-							<input type="submit" value="<?php esc_attr_e( 'Next Step', 'buddypress' ); ?>" id="group-creation-next" name="save" />
-
-						<?php endif;?>
-
-					</div><!-- PREV NEXT -->
-
 				</div>
 
 			<?php endif; ?>
@@ -239,24 +209,6 @@
 
 				</div><!-- GROuP PHOTO -->
 
-				<div class="prev-next">
-
-						<?php /* Previous Button */ ?>
-						<?php if(!bp_is_first_group_creation_step()) : ?>
-
-							<input type="button" value="<?php esc_attr_e('Back to Previous Step', 'buddypress'); ?>" id="group-creation-previous" name="previous" onclick="location.href='<?php bp_group_creation_previous_link(); ?>'" />
-
-						<?php endif; ?>
-
-						<?php /* Next Button */ ?>
-						<?php if(!bp_is_last_group_creation_step() && !bp_is_first_group_creation_step()) : ?>
-
-							<input type="submit" value="<?php esc_attr_e( 'Next Step', 'buddypress' ); ?>" id="group-creation-next" name="save" />
-
-						<?php endif;?>
-
-					</div><!-- PREV NEXT -->
-
 			<?php endif; ?>
 
 			<?php /* Group creation step 4: Cover image */ ?>
@@ -277,24 +229,6 @@
 				<?php wp_nonce_field('groups_create_save_group-cover-image'); ?>
 
 				</div>
-
-				<div class="prev-next">
-
-					<?php /* Previous Button */ ?>
-					<?php if(!bp_is_first_group_creation_step()) : ?>
-
-						<input type="button" value="<?php esc_attr_e('Back to Previous Step', 'buddypress'); ?>" id="group-creation-previous" name="previous" onclick="location.href='<?php bp_group_creation_previous_link(); ?>'" />
-
-					<?php endif; ?>
-
-					<?php /* Next Button */ ?>
-					<?php if(!bp_is_last_group_creation_step() && !bp_is_first_group_creation_step()) : ?>
-
-						<input type="submit" value="<?php esc_attr_e( 'Next Step', 'buddypress' ); ?>" id="group-creation-next" name="save" />
-
-					<?php endif;?>
-
-				</div><!-- PREV NEXT -->
 
 			<?php endif; ?>
 
@@ -333,33 +267,46 @@
 
 				<?php do_action('bp_after_group_invites_creation_step'); ?>
 
-				<?php if('crop-image' != bp_get_avatar_admin_step()) : ?>
-
-					<div class="prev-next">
-
-						<?php /* Previous Button */ ?>
-						<?php if(!bp_is_first_group_creation_step()) : ?>
-
-							<input type="button" value="<?php esc_attr_e('Back to Previous Step', 'buddypress'); ?>" id="group-creation-previous" name="previous" onclick="location.href='<?php bp_group_creation_previous_link(); ?>'" />
-
-						<?php endif; ?>
-
-						<?php /* Finish Button */ ?>
-						<?php if(bp_is_last_group_creation_step()) : ?>
-
-							<input type="submit" value="<?php esc_attr_e('Finish', 'buddypress'); ?>" id="group-creation-finish" name="save" />
-
-						<?php endif; ?>
-						
-					</div>
-
-				<?php endif;?>
-
 				</div>
 
 			<?php endif; ?>
 
 			<?php do_action('groups_custom_create_steps'); ?>
+
+			<?php if ( 'crop-image' != bp_get_avatar_admin_step() ) : ?>
+
+				<div class="submit" id="previous-next">
+
+					<?php /* Previous Button */ ?>
+					<?php if ( !bp_is_first_group_creation_step() ) : ?>
+
+						<input type="button" value="<?php esc_attr_e( 'Back to Previous Step', 'buddypress' ); ?>" id="group-creation-previous" name="previous" onclick="location.href='<?php bp_group_creation_previous_link(); ?>'" />
+
+					<?php endif; ?>
+
+					<?php /* Next Button */ ?>
+					<?php if ( !bp_is_last_group_creation_step() && !bp_is_first_group_creation_step() ) : ?>
+
+						<input type="submit" value="<?php esc_attr_e( 'Next Step', 'buddypress' ); ?>" id="group-creation-next" name="save" />
+
+					<?php endif;?>
+
+					<?php /* Create Button */ ?>
+					<?php if ( bp_is_first_group_creation_step() ) : ?>
+
+						<input type="submit" value="<?php esc_attr_e( 'Create Group and Continue', 'buddypress' ); ?>" id="group-creation-create" name="save" />
+
+					<?php endif; ?>
+
+					<?php /* Finish Button */ ?>
+					<?php if ( bp_is_last_group_creation_step() ) : ?>
+
+						<input type="submit" value="<?php esc_attr_e( 'Finish', 'buddypress' ); ?>" id="group-creation-finish" name="save" />
+
+					<?php endif; ?>
+				</div>
+
+			<?php endif;?>
 
 			<input type="hidden" name="group_id" id="group_id" value="<?php bp_new_group_id(); ?>" />
 

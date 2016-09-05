@@ -11,8 +11,8 @@
 <style>
     header.global, header.global nav ul.sf-header li ul, footer.global, div.global-notice, article.sticky div.inner:before,
     div.navigation-tabs div.item-list-tabs ul li a span, div.loader, input#send, input#profile-group-edit-submit, input#signup_submit, 
-    form.standard-form input.submit, input.submit, form.standard-form div.prev-next input#group-creation-next, form.standard-form div.prev-next input.create-group,
-    a.avatar-crop-submit, form.standard-form div.prev-next input#group-creation-finish, form.standard-form input#save, form.standard-form input#delete-group-button {
+    form.standard-form input.submit, input.submit, form.standard-form div#previous-next input#group-creation-create, form.standard-form div#previous-next input#group-creation-next, 
+    form.standard-form div#previous-next input#group-creation-finish, a.avatar-crop-submit, form.standard-form div.prev-next input#group-creation-finish, form.standard-form input#save, form.standard-form input#delete-group-button {
         background: <?php echo get_theme_mod('sf_primary_colour'); ?>
     }
     input:focus, select:focus, textarea:focus {

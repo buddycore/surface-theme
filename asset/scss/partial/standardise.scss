@@ -440,7 +440,7 @@ form.standard-form {
     input#bp-browse-button {
         width: auto !important;
     }
-    div.prev-next {
+    div#previous-next {
         clear: both;
         float: left;
         width: 100%;
@@ -459,7 +459,7 @@ form.standard-form {
             line-height: 30px;
             width: auto !important;
         }
-        input#group-creation-next, input.create-group, input#group-creation-finish {
+        input#group-creation-create, input#group-creation-next, input#group-creation-finish {
             float: right;
             color: rgba(255, 255, 255, .75);
         }
