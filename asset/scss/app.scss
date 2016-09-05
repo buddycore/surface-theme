@@ -34,7 +34,6 @@ html {
         font-size: 14px;
         margin-bottom: 60px;
         font-weight: 500;
-        padding-top: 90px;
     }
 }
 
@@ -50,11 +49,6 @@ header.global, footer.global {
 header.global {
     margin-bottom: 20px;
     height: 70px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
     nav {
         max-width: 1280px;
         padding: 0 20px;
@@ -312,20 +306,6 @@ header.global {
             top: -9999px;
             display: none;
         }
-    }
-}
-
-@media screen and (max-width: 900px) {
-    html {
-        body {
-            padding-top: 0;
-        }
-    }
-    header.global {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
     }
 }
 

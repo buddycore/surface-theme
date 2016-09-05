@@ -50,6 +50,31 @@ function sc_customizer($wp_customize){
         ) 
     );
 
+    $wp_customize->add_section('sf_layout', array(
+        'title'          => 'Layout',
+        'description'   => 'Modify layout options.',
+        'theme-supports'    => '',
+        'priority'          => '10',
+        'panel'             => 'sf_panel_1'
+    ));
+
+    // COLOURS
+    $wp_customize->add_setting('sf_sticky_header', array(
+        'default'   => null,
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control( 
+        new WP_Customize_Control($wp_customize, 'sf_sticky_header', 
+            array(
+                'label'      => __('Sticky header?', 'sf'),
+                'section'    => 'sf_layout',
+                'settings'   => 'sf_sticky_header',
+                'type'       => 'checkbox'
+            )
+        ) 
+    );
+
     // DEV NOTICE & SCRIPTS
     $wp_customize->add_panel('sf_panel_2',
         array(

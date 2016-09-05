@@ -17,5 +17,17 @@
     </footer>    
 </div><!-- CANVAS -->
 <?php wp_footer(); ?>
+
+<script>
+<?php if(get_theme_mod('sf_sticky_header')) : ?>
+
+    $('aside.global').theiaStickySidebar({ additionalMarginTop: 90 });
+
+<?php else : ?>
+
+    $('aside.global').theiaStickySidebar({ additionalMarginTop: 20 });
+
+<?php endif; ?>
+</script>
 </body>
 </html>

@@ -40,6 +40,29 @@
         background: <?php echo get_theme_mod('sf_primary_colour'); ?>;
         color: #FFF;
     }
+    <?php if(get_theme_mod('sf_sticky_header')) : ?>
+        html body {
+            padding-top: 90px;
+        }
+        header.global {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+        @media screen and (max-width: 900px) {
+            html body {
+                padding-top: 0;
+            }
+            header.global {
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+            }
+        }
+    <?php endif; ?>
 </style>
 </head>
 <body <?php body_class(); ?>>

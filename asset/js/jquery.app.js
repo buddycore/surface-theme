@@ -1,10 +1,5 @@
 $(document).ready(function(){   
 
-    $('aside.global').theiaStickySidebar({
-      // Settings
-      additionalMarginTop: 90
-    });
-
     // TABS | SIDEBAR
     $('div.tabs').tabs();
 
