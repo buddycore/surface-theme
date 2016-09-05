@@ -13,7 +13,7 @@
                 <li class="tags"><a href="#t3"><span>Tag Cloud</span></a></li>
             </ul>
             <div class="tabs-panel download" id="t0">
-                <p><a href="">Download this theme on Github</a></p>
+                <p><a href="https://github.com/buddycore/surface-theme">Download this theme on Github</a></p>
             </div>
             <div class="tabs-panel login" id="t1">
                 <?php if(!is_user_logged_in()) : ?>

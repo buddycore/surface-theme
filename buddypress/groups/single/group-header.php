@@ -31,7 +31,7 @@ endif;
                         <?php if(bp_is_active('activity')) : ?>
                             <li><a href="<?php bp_group_permalink(); ?>/activity"><?php echo get_group_total_updates_count(bp_get_group_id()); ?> Updates</a></li>   
                         <?php endif; ?>
-                        <li><a href="<?php bp_group_permalink(); ?>/memebers"><?php echo bp_get_group_total_members(); ?> Member</a></li>                     
+                        <li><a href="<?php bp_group_permalink(); ?>/members"><?php echo bp_get_group_total_members(); ?> Member</a></li>                     
                     </ul>                    
 
                     <?php if(!bp_group_is_admin()) : ?>
@@ -47,7 +47,7 @@ endif;
                 <?php if(bp_is_active('activity')) : ?>
                     <li><a href="<?php bp_group_permalink(); ?>/activity"><?php echo get_group_total_updates_count(bp_get_group_id()); ?> Updates</a></li>   
                 <?php endif; ?>
-                <li><a href="<?php bp_group_permalink(); ?>/memebers"><?php echo bp_get_group_total_members(); ?> Member</a></li>                     
+                <li><a href="<?php bp_group_permalink(); ?>/members"><?php echo bp_get_group_total_members(); ?> Member</a></li>                     
             </ul>
         </div>
 

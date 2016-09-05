@@ -1008,6 +1008,17 @@ div.padder > p.message {
   margin-bottom: 20px;
 }
 
+a.avatar-crop-submit {
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 30px;
+  display: inline-block;
+  padding: 0 10px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 20px !important;
+}
+
 form.standard-form {
   clear: both;
 }
@@ -1088,17 +1099,6 @@ form.standard-form div.group-photo div.bp-avatar-status p#bp-avatar-feedback, fo
 }
 
 form.standard-form div.group-photo div.bp-avatar-status p.warning, form.standard-form div.send-invites div.bp-avatar-status p.warning {
-  margin-top: 20px !important;
-}
-
-form.standard-form a.avatar-crop-submit {
-  font-size: 10px;
-  text-transform: uppercase;
-  line-height: 30px;
-  display: inline-block;
-  padding: 0 10px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
   margin-top: 20px !important;
 }
 

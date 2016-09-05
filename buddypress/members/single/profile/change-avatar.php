@@ -2,7 +2,7 @@
 
 <?php if(!(int)bp_get_option('bp-disable-avatar-uploads')) : ?>
 
-	<form action="" method="post" id="avatar-upload-form" enctype="multipart/form-data">
+	<form action="" method="post" id="avatar-upload-form" class="standard-form" enctype="multipart/form-data">
 
 		<?php if('upload-image' == bp_get_avatar_admin_step()) : ?>
 
@@ -33,7 +33,7 @@
 				<img src="<?php bp_avatar_to_crop(); ?>" id="avatar-crop-preview" class="avatar" alt="<?php esc_attr_e('Profile photo preview', 'buddypress'); ?>" />
 			</div>
 
-			<input type="submit" name="avatar-crop-submit" id="avatar-crop-submit" value="<?php esc_attr_e('Crop Image', 'buddypress'); ?>" />
+			<input type="submit" name="avatar-crop-submit" id="avatar-crop-submit" class="avatar-crop-submit" value="<?php esc_attr_e('Crop Image', 'buddypress'); ?>" />
 
 			<input type="hidden" name="image_src" id="image_src" value="<?php bp_avatar_to_crop_src(); ?>" />
 			<input type="hidden" id="x" name="x" />
