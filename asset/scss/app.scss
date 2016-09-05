@@ -358,11 +358,17 @@ header.global {
                 position: relative;
                 top: auto;
                 li.title {
-                    padding: 10px;
-                    background: rgba(255, 255, 255, .5);
-                    border: 1px solid rgba(255, 255, 255, .35);
-                    text-align: center;
+                    color: rgba(255, 255, 255, .5);
                     margin-bottom: 20px;
+                    padding-top: 2px;
+                    &:before {
+                        content: "\f0c9";
+                        font-family: FontAwesome;
+                        float: left;
+                        margin: -3px 10px 0 0;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
                 }
                 li:last-child {
                     margin-bottom: 0;

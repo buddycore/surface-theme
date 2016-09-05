@@ -505,11 +505,17 @@ header.global nav ul.menu-pages, header.global nav ul.menu-account {
     top: auto;
   }
   header.global nav ul.menu-pages li.title, header.global nav ul.menu-account li.title {
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
     margin-bottom: 20px;
+    padding-top: 2px;
+  }
+  header.global nav ul.menu-pages li.title:before, header.global nav ul.menu-account li.title:before {
+    content: "\f0c9";
+    font-family: FontAwesome;
+    float: left;
+    margin: -3px 10px 0 0;
+    font-size: 14px;
+    font-weight: normal;
   }
   header.global nav ul.menu-pages li:last-child, header.global nav ul.menu-account li:last-child {
     margin-bottom: 0;
