@@ -23,7 +23,7 @@
 				<div class="meta">
 					<ul>
 						<li class="group-detail"><?php bp_group_type(); ?> / <?php bp_group_member_count(); ?></li>
-						<li class="view"><a href="<?php bp_member_permalink(); ?>">Visit Group</a></li>
+						<li class="view"><a href="<?php bp_group_permalink(); ?>">Visit Group</a></li>
 					</ul>
 				</div>
 			</div>
