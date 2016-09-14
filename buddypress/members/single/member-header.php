@@ -42,7 +42,7 @@ $cover_img = bp_attachments_get_attachment('url', array(
 						<li><a href="<?php bp_displayed_user_link(); ?>friends"><?php echo friends_get_total_friend_count(); if(friends_get_total_friend_count() === 0 || friends_get_total_friend_count() > 1) : echo ' Friends'; else : echo ' Friend'; endif; ?></a></li>
 					<?php endif; ?>
 					<?php if(bp_is_active('groups')) : ?>
-						<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo groups_get_total_group_count(); if(groups_get_total_group_count() === 0 || groups_get_total_group_count() > 1) : echo ' Groups'; else : echo ' Group'; endif; ?></a></li>
+						<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo sc_get_group_belongs_to_count_tx(); ?></a></li>
 					<?php endif; ?>
 					</ul>
 					<div class="profile-links">
@@ -71,7 +71,7 @@ $cover_img = bp_attachments_get_attachment('url', array(
 					<li><a href="<?php bp_displayed_user_link(); ?>friends"><?php echo friends_get_total_friend_count(); if(friends_get_total_friend_count() === 0 || friends_get_total_friend_count() > 1) : echo ' Friends'; else : echo ' Friend'; endif; ?></a></li>
 				<?php endif; ?>
 				<?php if(bp_is_active('groups')) : ?>
-					<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo groups_get_total_group_count(); if(groups_get_total_group_count() === 0 || groups_get_total_group_count() > 1) : echo ' Groups'; else : echo ' Group'; endif; ?></a></li>
+					<li><a href="<?php bp_displayed_user_link(); ?>groups"><?php echo sc_get_group_belongs_to_count_tx(); ?></a></li>
 				<?php endif; ?>
 			</ul>
 		</div>
