@@ -30,7 +30,7 @@
     <li class="nv-friends"><a href="<?php echo bp_loggedin_user_domain(); ?>friends">Friends <span><?php echo friends_get_friend_count_for_user($user_id); ?></span></a></li>
     <?php endif; ?>
     <?php if(bp_is_active('groups')) : ?>
-    <li class="nv-groups"><a href="<?php echo bp_loggedin_user_domain(); ?>groups">Groups <span><?php echo bp_get_group_total_for_member(1); ?></span></a></li>
+    <li class="nv-groups"><a href="<?php echo bp_loggedin_user_domain(); ?>groups">Groups <?php if(sc_get_group_belongs_to_count() > 0) : ?><span><?php echo sc_get_group_belongs_to_count(); ?></span><?php endif; ?></a></li>
     <?php endif; ?>
     <?php if(bp_is_active('blogs')) : ?>
     <li class="nv-blogs"><a href="<?php echo bp_loggedin_user_domain(); ?>blogs">Blogs</a></li>

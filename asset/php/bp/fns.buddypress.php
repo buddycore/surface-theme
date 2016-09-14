@@ -38,6 +38,34 @@ function sc_get_profile_percent($user_id) {
 
 }
 
+function sc_get_group_belongs_to_count_tx() {
+
+    $myGroupTotal = groups_get_user_groups();
+
+    if($myGroupTotal['total'] === 0 || $myGroupTotal['total'] > 1) :
+
+        return $myGroupTotal['total'] . ' groups'; 
+
+    else :
+
+        return $myGroupTotal['total'] . ' group'; 
+    
+    endif;
+
+}
+
+function sc_get_group_belongs_to_count() {
+
+    $myGroupTotal = groups_get_user_groups();
+
+    if($myGroupTotal['total'] > 0) :
+
+        return $myGroupTotal['total']; 
+    
+    endif;
+
+}
+
 function sc_uploadcare_activity($activity) {
 
     // print_r($_FILES);
