@@ -42,13 +42,13 @@ function sc_get_group_belongs_to_count_tx() {
 
     $myGroupTotal = groups_get_user_groups();
 
-    if($myGroupTotal['total'] === 0 || $myGroupTotal['total'] > 1) :
+    if(groups_total_groups_for_user() === 0 || groups_total_groups_for_user() > 1) :
 
-        return $myGroupTotal['total'] . ' groups'; 
+        return groups_total_groups_for_user() . ' groups'; 
 
     else :
 
-        return $myGroupTotal['total'] . ' group'; 
+        return groups_total_groups_for_user() . ' group'; 
     
     endif;
 
@@ -56,11 +56,9 @@ function sc_get_group_belongs_to_count_tx() {
 
 function sc_get_group_belongs_to_count() {
 
-    $myGroupTotal = groups_get_user_groups();
+    if(groups_total_groups_for_user() > 0) :
 
-    if($myGroupTotal['total'] > 0) :
-
-        return $myGroupTotal['total']; 
+        return groups_total_groups_for_user(); 
     
     endif;
 
