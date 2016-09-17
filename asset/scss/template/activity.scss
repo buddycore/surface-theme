@@ -55,6 +55,7 @@ form.activity-post-form {
             padding: 0 10px;
             color: palette(Grey, 700);
             cursor: pointer;
+            float: left;
         }
         div.bpfb_toolbar_container {
             float: left;
@@ -67,6 +68,7 @@ form.activity-post-form {
                 text-align: center;
                 line-height: 30px;
                 color: palette(Grey, 700);
+                border-radius: 100%;
                 span {
                     display: none;
                 }
@@ -97,11 +99,37 @@ form.activity-post-form {
             }
         }
         div.bpfb_controls_container {
+            input#bpfb_link_preview_url, input#bpfb_video_url {
+                background: #FFF;
+                margin: 5px 0;
+            }
+            input#bpfb_remote_image_preview {
+                border: none;
+                width: auto !important;
+                float: right;
+                height: 30px;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 10px;
+                color: rgba(255, 255, 255, .5);
+                padding: 0 10px;
+                margin: 0;
+                font-weight: 400;
+                cursor: pointer;
+            }
             div#bpfb_tmp_photo {
                 padding-top: 5px;
                 div.qq-uploader {
                     div.qq-upload-drop-area {
-
+                        background: #FFF;
+                        border: 2px dashed palette(Grey, 400);
+                        text-transform: uppercase;
+                        span {
+                            font-size: 12px;
+                            font-weight: 900;
+                            margin: 0;
+                            transform: translateY(-50%);
+                        }
                     }
                     div.qq-upload-button {
                         padding: 0;
@@ -113,7 +141,12 @@ form.activity-post-form {
                         color: palette(Grey, 700);
                         width: 100%;
                         cursor: pointer;
-                        background: palette(Grey, 500);
+                        background: palette(Blue, 500);
+                        outline: none;
+                        color: rgba(255, 255, 255, .5);
+                        margin-bottom: 0;
+                        overflow-y: hidden;
+                        float: left;
                         input {
                             cursor: pointer;
                             width: 100%;
@@ -132,9 +165,17 @@ form.activity-post-form {
                 width: 100%;
                 cursor: pointer;
                 background: palette(Grey, 500);
+                margin: 5px 0 0 0;
+                border: none !important;
+            }
+            ul.qq-upload-list {
+                margin: 0 !important;
             }
             ul#bpfb_tmp_photo_list {
-                margin: -10px 0 5px 0;
+                margin: 0 0 5px 0;
+                float: left;
+                width: 100%;
+                clear: both;
                 li:last-child {
                     margin-bottom: 0;
                 }
@@ -154,8 +195,22 @@ form.activity-post-form {
                     }
                 }
             }
+            div#bpfb_remote_image_container {
+                overflow-y: hidden;
+                input {
+                    background: #FFF;
+                    margin: 5px 0 0 0;
+                }
+                br {
+                    display: none;
+                }
+            }
         }
         div.bpfb_preview_container {
+            clear: both;
+            iframe {
+                margin-bottom: 5px;
+            }
             img {
                 float: left;
                 margin: 0 5px 5px 0;
@@ -164,26 +219,111 @@ form.activity-post-form {
                 border: 1px solid palette(Grey, 400);
                 background: #FFF;
             }
+            table {
+                tbody {
+                    tr {
+                        td {
+                            vertical-align: top;
+                        }
+                        td:last-child {
+                            padding-left: 10px;
+                            div.bpfb_link_preview_title {
+                                font-size: 14px;
+                                margin-bottom: 5px;
+                            }
+                            div.bpfb_link_preview_url {
+                                font-size: 10px;
+                                margin-bottom: 10px;
+                            }
+                            div.bpfb_link_preview_body {
+                                line-height: 24px;
+                                font-size: 14px;
+                            }
+                            div.bpfb_thumbnail_chooser {
+                                clear: both;
+                                height: 30px;
+                                line-height: 30px;
+                                font-size: 10px;
+                                text-transform: uppercase;
+                                padding: 0;
+                                margin-top: 10px;
+
+                                span.bpfb_left, span.bpfb_right {
+                                    height: 30px;
+                                    width: 30px;
+                                    border: none;
+                                    background: palette(Grey, 500);
+                                    color: rgba(255, 255, 255, .5);
+                                    display: block;
+                                    cursor: pointer;
+                                    float: left;
+                                    margin-right: 5px;
+                                    text-align: center;
+                                    line-height: 30px;
+                                    img {
+                                        display: none;
+                                    }
+                                    &:before {
+                                        font-family: FontAwesome;
+                                        font-size: 14px;
+                                    }
+                                }
+                                span.bpfb_left {
+                                    &:before {
+                                        content: "\f060";
+                                    }
+                                }
+                                span.bpfb_right {
+                                    &:before {
+                                        content: "\f061";
+                                    }
+                                }
+                                br {
+                                    display: none;
+                                }
+                                input#bpfb_link_no_thumbnail {
+                                    width: auto !important;
+                                    float: left;
+                                    clear: both;
+                                    padding: 0 !important;
+                                    margin: 8px 5px 0 0;
+                                }
+                                label {
+                                    margin: 0 !important;
+                                    float: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         div.bpfb_action_container {
+            clear: both;
             p {
+                border-top: 1px solid palette(Grey, 400);
+                padding-top: 5px !important;
                 input#bpfb_cancel {
-                    width: 100%;
+                    float: right;
+                    width: auto !important;
                     border: none;
                     font-size: 10px;
                     text-transform: uppercase;
-                    padding: 10px 0;
-                    margin-top: 5px;
+                    padding: 0 10px;
+                    height: 30px;
+                    line-height: 30px;
                     cursor: pointer;
                 }
                 input#bpfb_submit {
                     border: none;
+                    width: auto !important;
+                    float: right;
                     height: 30px;
                     text-align: center;
                     text-transform: uppercase;
                     font-size: 10px;
                     color: rgba(255, 255, 255, .5);
-                    padding: 0;
+                    padding: 0 10px;
                     margin: 0;
                     font-weight: 400;
                     cursor: pointer;
@@ -193,6 +333,21 @@ form.activity-post-form {
         div.bpfb_controls_container, div.bpfb_preview_container, div.bpfb_action_container { 
             margin: 0;
             padding: 0;
+            clear: both;
+            input#bpfb_video_url_preview, input#bpfb_link_url_preview {
+                border: none;
+                width: auto !important;
+                float: right;
+                height: 30px;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 10px;
+                color: rgba(255, 255, 255, .5);
+                padding: 0 10px;
+                margin: 0;
+                font-weight: 400;
+                cursor: pointer;
+            }
         }
         input#bpfb_cancel_action {
             
@@ -284,9 +439,12 @@ ul#activity-stream {
     li.load-more, li.load-newest {
         padding: 0;
         text-align: center;
+        height: 40px;
+        line-height: 40px;
         a {
             text-align: center;
-            padding: 20px;
+            height: 40px;
+            line-height: 40px;
             display: block;
             font-size: 10px;
             border-bottom: 1px solid palette(Grey, 400);
@@ -348,6 +506,16 @@ ul#activity-stream {
                 br {
                     display: none;
                 }
+                div.bpfb_final_link {
+                    margin-bottom: 20px;
+                    overflow-y: hidden;
+                    div.bpfb_link_preview_container {
+                        height: auto !important;
+                        img {
+                            margin: 0;
+                        }
+                    }
+                }
                 div.activity-media {
                     font-size: 10px;
                     text-transform: uppercase;
@@ -376,6 +544,7 @@ ul#activity-stream {
                 text-transform: uppercase;
                 height: 30px;
                 line-height: 30px;
+                clear: both;
                 margin-top: 20px;
                 a {
                     padding: 0 10px;

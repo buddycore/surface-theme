@@ -40,7 +40,10 @@
         background: <?php echo get_theme_mod('sf_primary_colour'); ?>;
         color: #FFF;
     }
-    form.activity-post-form div.bpfb_actions_container div.bpfb_action_container input#bpfb_submit {
+    form.activity-post-form div.bpfb_actions_container div.bpfb_action_container input#bpfb_submit, 
+    form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container input#bpfb_remote_image_preview, 
+    form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container input#bpfb_video_url_preview,
+    form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container input#bpfb_link_url_preview {
         background: <?php echo get_theme_mod('sf_primary_colour'); ?>;
     }
 
