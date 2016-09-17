@@ -2425,6 +2425,11 @@ div.directory-mast.pattern-7 {
   background: url(../img/tile/escheresque-dark.png);
 }
 
+div.bpfb_form_container {
+  background: transparent;
+  padding: 0;
+}
+
 form.activity-post-form {
   float: left;
   width: 100%;
@@ -2444,6 +2449,168 @@ form.activity-post-form div#message {
   text-align: center;
   margin-bottom: 20px;
   margin-bottom: 20px;
+}
+
+form.activity-post-form div.bpfb_actions_container {
+  clear: both;
+  width: 100%;
+  background: #E0E0E0;
+  border-bottom: 5px solid #BDBDBD;
+  border-top: 1px solid #BDBDBD;
+  border-left: 1px solid #BDBDBD;
+  border-right: 1px solid #BDBDBD;
+  padding: 5px;
+  overflow-y: hidden;
+  margin: 8px 0 10px 0;
+  position: relative;
+}
+
+form.activity-post-form div.bpfb_actions_container input#bpfb_cancel_action {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-weight: 400;
+  width: auto !important;
+  text-transform: uppercase;
+  background: transparent;
+  height: 30px;
+  line-height: 30px;
+  background: #9E9E9E !important;
+  padding: 0 10px;
+  color: #616161;
+  cursor: pointer;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container {
+  float: left;
+  padding: 0;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a {
+  width: 30px;
+  margin-right: 5px;
+  height: 30px;
+  background: #9E9E9E !important;
+  text-align: center;
+  line-height: 30px;
+  color: #616161;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a span {
+  display: none;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a:before {
+  font-family: FontAwesome;
+  font-size: 12px;
+  margin: 0;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a#bpfb_addPhotos:before {
+  content: "\f1c5";
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a#bpfb_addVideos:before {
+  content: "\f03d";
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a#bpfb_addLinks:before {
+  content: "\f0c1";
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container div#bpfb_tmp_photo {
+  padding-top: 5px;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container div#bpfb_tmp_photo div.qq-uploader div.qq-upload-button {
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #616161;
+  width: 100%;
+  cursor: pointer;
+  background: #9E9E9E;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container div#bpfb_tmp_photo div.qq-uploader div.qq-upload-button input {
+  cursor: pointer;
+  width: 100%;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container input#bpfb_add_remote_image {
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #616161;
+  width: 100%;
+  cursor: pointer;
+  background: #9E9E9E;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container ul#bpfb_tmp_photo_list {
+  margin: -10px 0 5px 0;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container ul#bpfb_tmp_photo_list li:last-child {
+  margin-bottom: 0;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container ul#bpfb_tmp_photo_list li {
+  padding: 5px;
+  font-size: 10px;
+  background: #BDBDBD;
+  margin-bottom: 1px;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container ul#bpfb_tmp_photo_list li span.qq-upload-size {
+  font-size: 10px;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container img {
+  float: left;
+  margin: 0 5px 5px 0;
+  border: none;
+  padding: 5px;
+  border: 1px solid #BDBDBD;
+  background: #FFF;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_action_container p input#bpfb_cancel {
+  width: 100%;
+  border: none;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_action_container p input#bpfb_submit {
+  border: none;
+  height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container, form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container, form.activity-post-form div.bpfb_actions_container div.bpfb_action_container {
+  margin: 0;
+  padding: 0;
 }
 
 form.activity-post-form div.uploadcare-widget {
@@ -2593,6 +2760,10 @@ ul#activity-stream li div.activity-content div.activity-inner img {
   padding: 5px;
   border: 1px solid #BDBDBD;
   margin-top: 20px;
+}
+
+ul#activity-stream li div.activity-content div.activity-inner br {
+  display: none;
 }
 
 ul#activity-stream li div.activity-content div.activity-inner div.activity-media {

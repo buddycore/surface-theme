@@ -1,4 +1,7 @@
-
+div.bpfb_form_container {
+    background: transparent;
+    padding: 0;
+}
 form.activity-post-form {
     float: left;
     width: 100%;
@@ -20,6 +23,179 @@ form.activity-post-form {
     div#whats-new-content {
         div#whats-new-textarea {
 
+        }
+    }
+    div.bpfb_actions_container {
+        clear: both;
+        width: 100%;
+        background: palette(Grey, 300);
+        border-bottom: 5px solid palette(Grey, 400);
+        border-top: 1px solid palette(Grey, 400);
+        border-left: 1px solid palette(Grey, 400);
+        border-right: 1px solid palette(Grey, 400);
+        padding: 5px;
+        overflow-y: hidden;
+        margin: 8px 0 10px 0;
+        position: relative;
+        input#bpfb_cancel_action {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-size: 10px;
+            font-weight: 400;
+            width: auto !important;
+            text-transform: uppercase;
+            background: transparent;
+            height: 30px;
+            line-height: 30px;
+            background: palette(Grey, 500) !important;
+            padding: 0 10px;
+            color: palette(Grey, 700);
+            cursor: pointer;
+        }
+        div.bpfb_toolbar_container {
+            float: left;
+            padding: 0;
+            a {
+                width: 30px;
+                margin-right: 5px;
+                height: 30px;
+                background: palette(Grey, 500) !important;
+                text-align: center;
+                line-height: 30px;
+                color: palette(Grey, 700);
+                span {
+                    display: none;
+                }
+                &:before {
+                    font-family: FontAwesome;
+                    font-size: 12px;
+                    margin: 0;
+                }
+            }
+            a:hover, a:active {
+
+            }
+            a#bpfb_addPhotos {
+                
+                &:before {
+                    content: "\f1c5";
+                }
+            }
+            a#bpfb_addVideos {
+                &:before {
+                    content: "\f03d";
+                }
+            }
+            a#bpfb_addLinks {
+                &:before {
+                    content: "\f0c1";
+                }
+            }
+        }
+        div.bpfb_controls_container {
+            div#bpfb_tmp_photo {
+                padding-top: 5px;
+                div.qq-uploader {
+                    div.qq-upload-drop-area {
+
+                    }
+                    div.qq-upload-button {
+                        padding: 0;
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 0 10px;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        color: palette(Grey, 700);
+                        width: 100%;
+                        cursor: pointer;
+                        background: palette(Grey, 500);
+                        input {
+                            cursor: pointer;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            input#bpfb_add_remote_image {
+                padding: 0;
+                height: 30px;
+                line-height: 30px;
+                padding: 0 10px;
+                font-size: 10px;
+                text-transform: uppercase;
+                color: palette(Grey, 700);
+                width: 100%;
+                cursor: pointer;
+                background: palette(Grey, 500);
+            }
+            ul#bpfb_tmp_photo_list {
+                margin: -10px 0 5px 0;
+                li:last-child {
+                    margin-bottom: 0;
+                }
+                li {
+                    padding: 5px;
+                    font-size: 10px;
+                    background: palette(Grey, 400);
+                    margin-bottom: 1px;
+                    span.qq-upload-file {
+
+                    }
+                    span.qq-upload-size {
+                        font-size: 10px;
+                    }
+                    span.qq-upload-failed-text {
+
+                    }
+                }
+            }
+        }
+        div.bpfb_preview_container {
+            img {
+                float: left;
+                margin: 0 5px 5px 0;
+                border: none;
+                padding: 5px;
+                border: 1px solid palette(Grey, 400);
+                background: #FFF;
+            }
+        }
+        div.bpfb_action_container {
+            p {
+                input#bpfb_cancel {
+                    width: 100%;
+                    border: none;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    padding: 10px 0;
+                    margin-top: 5px;
+                    cursor: pointer;
+                }
+                input#bpfb_submit {
+                    border: none;
+                    height: 30px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    color: rgba(255, 255, 255, .5);
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 400;
+                    cursor: pointer;
+                }
+            }
+        }
+        div.bpfb_controls_container, div.bpfb_preview_container, div.bpfb_action_container { 
+            margin: 0;
+            padding: 0;
+        }
+        input#bpfb_cancel_action {
+            
         }
     }
     div.uploadcare-widget {
@@ -168,6 +344,9 @@ ul#activity-stream {
                     padding: 5px;
                     border: 1px solid palette(Grey, 400);
                     margin-top: 20px;
+                }
+                br {
+                    display: none;
                 }
                 div.activity-media {
                     font-size: 10px;

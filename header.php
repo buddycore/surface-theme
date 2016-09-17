@@ -40,6 +40,11 @@
         background: <?php echo get_theme_mod('sf_primary_colour'); ?>;
         color: #FFF;
     }
+    form.activity-post-form div.bpfb_actions_container div.bpfb_action_container input#bpfb_submit {
+        background: <?php echo get_theme_mod('sf_primary_colour'); ?>;
+    }
+
+    
     <?php if(get_theme_mod('sf_sticky_header')) : ?>
         html body {
             padding-top: 90px;
