@@ -2961,6 +2961,12 @@ ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_lin
   margin: 0;
 }
 
+ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_contents {
+  width: auto;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
 ul#activity-stream li div.activity-content div.activity-inner div.activity-media {
   font-size: 10px;
   text-transform: uppercase;
