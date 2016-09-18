@@ -2573,7 +2573,7 @@ form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a:
 }
 
 form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a#bpfb_addPhotos:before {
-  content: "\f1c5";
+  content: "\f093";
 }
 
 form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a#bpfb_addVideos:before {
@@ -2664,7 +2664,7 @@ form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container u
 }
 
 form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container ul#bpfb_tmp_photo_list {
-  margin: 0 0 5px 0;
+  margin: 0;
   float: left;
   width: 100%;
   clear: both;
@@ -2708,15 +2708,24 @@ form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container if
 
 form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container img {
   float: left;
-  margin: 0 5px 5px 0;
+  margin: 5px 5px 5px 0;
   border: none;
   padding: 5px;
   border: 1px solid #BDBDBD;
   background: #FFF;
 }
 
+form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container table {
+  margin-top: 5px;
+  float: left;
+}
+
 form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container table tbody tr td {
   vertical-align: top;
+}
+
+form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container table tbody tr td img {
+  margin: 0;
 }
 
 form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container table tbody tr td:last-child {

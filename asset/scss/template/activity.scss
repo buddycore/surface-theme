@@ -138,9 +138,8 @@ form.activity-post-form {
 
             }
             a#bpfb_addPhotos {
-                
                 &:before {
-                    content: "\f1c5";
+                    content: "\f093";
                 }
             }
             a#bpfb_addVideos {
@@ -228,7 +227,7 @@ form.activity-post-form {
                 margin: 0 !important;
             }
             ul#bpfb_tmp_photo_list {
-                margin: 0 0 5px 0;
+                margin: 0;
                 float: left;
                 width: 100%;
                 clear: both;
@@ -269,17 +268,22 @@ form.activity-post-form {
             }
             img {
                 float: left;
-                margin: 0 5px 5px 0;
+                margin: 5px 5px 5px 0;
                 border: none;
                 padding: 5px;
                 border: 1px solid palette(Grey, 400);
                 background: #FFF;
             }
             table {
+                margin-top: 5px;
+                float: left;
                 tbody {
                     tr {
                         td {
                             vertical-align: top;
+                            img {
+                                margin: 0;
+                            }
                         }
                         td:last-child {
                             padding-left: 10px;
