@@ -2571,10 +2571,14 @@ ul#activity-stream li div.activity-content div.activity-inner br {
 ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link {
   margin-bottom: 20px;
   overflow-y: hidden;
+  padding: 10px;
+  border: 1px solid #BDBDBD;
+  background: #E0E0E0;
 }
 
 ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_preview_container {
   height: auto !important;
+  margin-bottom: 10px;
 }
 
 ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_preview_container img {
@@ -2584,7 +2588,7 @@ ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_lin
 ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_contents {
   width: auto;
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 0 0 0 0;
 }
 
 ul#activity-stream li div.activity-content div.activity-inner div.activity-media {
@@ -2841,6 +2845,12 @@ div#TB_window div#TB_closeWindow button {
   text-transform: uppercase;
   font-size: 10px;
   padding: 0 10px;
+  outline: none;
+  border: none;
+}
+
+div#TB_window div#TB_closeWindow button span {
+  color: #616161;
 }
 
 div#TB_window div#TB_closeWindow button span.screen-reader-text {
@@ -2856,6 +2866,9 @@ div#TB_window div#TB_closeWindow button span.tb-close-icon {
   line-height: normal;
   display: inline-block;
   float: left;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 div#TB_window div#TB_closeWindow button span {

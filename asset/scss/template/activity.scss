@@ -143,8 +143,12 @@ ul#activity-stream {
                 div.bpfb_final_link {
                     margin-bottom: 20px;
                     overflow-y: hidden;
+                    padding: 10px;
+                    border: 1px solid palette(Grey, 400);
+                    background: palette(Grey, 300);
                     div.bpfb_link_preview_container {
                         height: auto !important;
+                        margin-bottom: 10px;
                         img {
                             margin: 0;
                         }
@@ -152,7 +156,7 @@ ul#activity-stream {
                     div.bpfb_link_contents {
                         width: auto;
                         padding: 0 ;
-                        margin: 20px 0 0 0;
+                        margin: 0 0 0 0;
                     }
                 }
                 div.activity-media {
