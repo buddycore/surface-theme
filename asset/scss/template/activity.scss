@@ -140,23 +140,54 @@ ul#activity-stream {
                 br {
                     display: none;
                 }
+                @media screen and (max-width: 700px) {
+                    div.bpfb_final_link {
+                        div.bpfb_link_preview_container, div.bpfb_link_contents {
+                            float: none !important;
+                        }
+                        div.bpfb_link_preview_container {
+                            margin-bottom: 10px !important;
+                        }
+                        div.bpfb_link_contents {
+                            padding-left: 0 !important;
+
+                        }
+                    }
+                }
                 div.bpfb_final_link {
-                    margin-bottom: 20px;
                     overflow-y: hidden;
                     padding: 10px;
                     border: 1px solid palette(Grey, 400);
                     background: palette(Grey, 300);
                     div.bpfb_link_preview_container {
                         height: auto !important;
-                        margin-bottom: 10px;
+                        float: left;
+                        margin-right: 10px;
+                        width: auto;
                         img {
                             margin: 0;
+                            max-width: 150px !important;
                         }
                     }
                     div.bpfb_link_contents {
                         width: auto;
                         padding: 0 ;
                         margin: 0 0 0 0;
+                        float: left;
+                        div.bpfb_link_preview_title {
+                            font-size: 14px;
+                            margin-bottom: 5px;
+                            font-weight: 900;
+                            line-height: normal;
+                        }
+                         div.bpfb_link_preview_url {
+                            font-size: 10px;
+                            margin-bottom: 10px;
+                        }
+                        div.bpfb_link_preview_body {
+                            line-height: 24px;
+                            font-size: 14px;
+                        }
                     }
                 }
                 div.activity-media {

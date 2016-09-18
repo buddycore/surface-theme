@@ -2568,8 +2568,19 @@ ul#activity-stream li div.activity-content div.activity-inner br {
   display: none;
 }
 
+@media screen and (max-width: 700px) {
+  ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_preview_container, ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_contents {
+    float: none !important;
+  }
+  ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_preview_container {
+    margin-bottom: 10px !important;
+  }
+  ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_contents {
+    padding-left: 0 !important;
+  }
+}
+
 ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link {
-  margin-bottom: 20px;
   overflow-y: hidden;
   padding: 10px;
   border: 1px solid #BDBDBD;
@@ -2578,17 +2589,38 @@ ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_lin
 
 ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_preview_container {
   height: auto !important;
-  margin-bottom: 10px;
+  float: left;
+  margin-right: 10px;
+  width: auto;
 }
 
 ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_preview_container img {
   margin: 0;
+  max-width: 150px !important;
 }
 
 ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_contents {
   width: auto;
   padding: 0;
   margin: 0 0 0 0;
+  float: left;
+}
+
+ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_contents div.bpfb_link_preview_title {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 900;
+  line-height: normal;
+}
+
+ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_contents div.bpfb_link_preview_url {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+ul#activity-stream li div.activity-content div.activity-inner div.bpfb_final_link div.bpfb_link_contents div.bpfb_link_preview_body {
+  line-height: 24px;
+  font-size: 14px;
 }
 
 ul#activity-stream li div.activity-content div.activity-inner div.activity-media {
@@ -3109,6 +3141,8 @@ form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container ta
 form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container table tbody tr td:last-child div.bpfb_link_preview_title {
   font-size: 14px;
   margin-bottom: 5px;
+  font-weight: 900;
+  line-height: normal;
 }
 
 form.activity-post-form div.bpfb_actions_container div.bpfb_preview_container table tbody tr td:last-child div.bpfb_link_preview_url {

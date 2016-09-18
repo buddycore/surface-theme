@@ -255,6 +255,7 @@ form.activity-post-form {
                 }
             }
         }
+
         div.bpfb_preview_container {
             clear: both;
             iframe {
@@ -268,6 +269,7 @@ form.activity-post-form {
                 border: 1px solid palette(Grey, 400);
                 background: #FFF;
             }
+
             table {
                 margin-top: 5px;
                 float: left;
@@ -284,6 +286,8 @@ form.activity-post-form {
                             div.bpfb_link_preview_title {
                                 font-size: 14px;
                                 margin-bottom: 5px;
+                                font-weight: 900;
+                                line-height: normal;
                             }
                             div.bpfb_link_preview_url {
                                 font-size: 10px;
