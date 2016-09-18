@@ -2599,7 +2599,7 @@ form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container i
   font-size: 10px;
   color: rgba(255, 255, 255, 0.5);
   padding: 0 10px;
-  margin: 0;
+  margin: 5px 0 0 0;
   font-weight: 400;
   cursor: pointer;
 }
