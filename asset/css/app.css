@@ -2425,6 +2425,67 @@ div.directory-mast.pattern-7 {
   background: url(../img/tile/escheresque-dark.png);
 }
 
+div#TB_window img#TB_Image {
+  margin: 15px;
+  border: none;
+}
+
+div#TB_window a#TB_ImageOff span.screen-reader-text {
+  display: none;
+}
+
+div#TB_window div#TB_caption {
+  padding: 0 15px 15px 15px;
+  height: auto;
+}
+
+div#TB_window div#TB_caption div#TB_secondLine {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+div#TB_window div#TB_closeWindow {
+  position: absolute;
+  top: 4px;
+  right: -10px;
+}
+
+div#TB_window div#TB_closeWindow button {
+  position: relative;
+  left: auto;
+  right: auto;
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+  height: 30px;
+  line-height: 30px;
+  width: auto;
+  background: #FFF;
+  float: left;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 0 10px;
+}
+
+div#TB_window div#TB_closeWindow button span.screen-reader-text {
+  float: right;
+}
+
+div#TB_window div#TB_closeWindow button span.tb-close-icon {
+  position: relative;
+  top: auto;
+  right: auto;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  display: inline-block;
+  float: left;
+}
+
+div#TB_window div#TB_closeWindow button span {
+  float: left;
+}
+
 div.bpfb_form_container {
   background: transparent;
   padding: 0;
