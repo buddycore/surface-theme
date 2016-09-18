@@ -2879,6 +2879,12 @@ form.activity-post-form div.bpfb_actions_container {
   overflow-y: hidden;
   margin: 8px 0 10px 0;
   position: relative;
+  opacity: .75;
+  transition: .2s linear all;
+}
+
+form.activity-post-form div.bpfb_actions_container:hover, form.activity-post-form div.bpfb_actions_container:active {
+  opacity: 1;
 }
 
 form.activity-post-form div.bpfb_actions_container input#bpfb_cancel_action {

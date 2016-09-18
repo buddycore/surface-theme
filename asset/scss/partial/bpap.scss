@@ -75,6 +75,11 @@ form.activity-post-form {
         overflow-y: hidden;
         margin: 8px 0 10px 0;
         position: relative;
+        opacity: .75;
+        transition: .2s linear all;
+        &:hover, &:active {
+            opacity: 1;
+        }
         input#bpfb_cancel_action {
             position: absolute;
             top: 5px;
