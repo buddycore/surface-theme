@@ -2979,7 +2979,7 @@ form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a:
 }
 
 form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a#bpfb_addPhotos:before {
-  content: "\f093";
+  content: "\f030";
 }
 
 form.activity-post-form div.bpfb_actions_container div.bpfb_toolbar_container a#bpfb_addVideos:before {
