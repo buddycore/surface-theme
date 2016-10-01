@@ -81,5 +81,35 @@ function sc_uploadcare_activity($activity) {
     // endif;
 
 }
+
+function sc_bp_message_status($msg_id){
+
+    global $wpdb, $bp;
+
+    if(!messages_is_user_sender($bp->loggedin_user->id, $msg_id) && is_user_logged_in()) :
+
+        $msg_seen = $wpdb->get_results("SELECT * FROM wp_bp_messages_meta WHERE message_id = $msg_id");
+
+        if($wpdb->num_rows === 0) :
+
+            $wpdb->insert('wp_bp_messages_meta', array('message_id' => $msg_id, 'meta_key' => 'sc_is_seen', 'meta_value' => current_time('mysql', 1)), array('%d', '%s', '%s'));
+
+        endif;
+
+    endif;
+
+    $msg_status = $wpdb->get_results("SELECT * FROM wp_bp_messages_meta WHERE message_id = $msg_id");
+
+    if($wpdb->num_rows > 0) :
+
+        echo '<div class="status"><strong>Seen:</strong> '.date('jS F, Y', strtotime($msg_status[0]->meta_value)).'</div>';
+
+    else :
+
+        echo '<div class="status unread"><strong>Unread</strong></div>';
+
+    endif;
+
+}
  
 add_action('bp_activity_add', 'sc_uploadcare_activity', 10, 1);

@@ -4182,6 +4182,24 @@ div.message-box div.message-content {
   line-height: 22px;
 }
 
+div.message-box div.status {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+div.message-box div.status strong:before {
+  font-family: FontAwesome;
+  font-size: 12px;
+  margin-right: 5px;
+  content: "\f00c";
+}
+
+div.message-box div.status.unread strong:before {
+  content: "\f129";
+}
+
 div.message-box ul.options {
   background: #E0E0E0;
   font-size: 10px;

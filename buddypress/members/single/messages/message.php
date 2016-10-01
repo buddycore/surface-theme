@@ -31,6 +31,10 @@
 
 	<div class="message-content standardise"><?php bp_the_thread_message_content(); ?></div>
 
+	<?php sc_bp_message_status(bp_get_the_thread_message_id()); ?>
+
+	
+
 	<?php if(bp_is_active('messages', 'star')) : ?>
 		<ul class="options">
 			<li><?php bp_the_message_star_action_link(); ?></li>
