@@ -29,5 +29,12 @@
 
 <?php endif; ?>
 </script>
+<div class="min-requirements">
+    <div class="table">
+        <div class="table-cell">
+            <p>Your device does not meet the minimum requirements to view this site.</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>

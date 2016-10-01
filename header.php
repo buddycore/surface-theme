@@ -96,6 +96,11 @@
                     <?php get_search_form(); ?>
                 </li>
                 <?php if(is_user_logged_in()) : ?>
+                    <?php if(bp_get_total_unread_messages_count()) : ?>
+                        <li class="nv-messages">
+                            <a href="<?php echo bp_loggedin_user_domain(); ?>messages"><span></span></a>
+                        </li>
+                    <?php endif; ?>
                 <li class="nv-account">
                     <?php if(bp_is_active('notifications') && bp_notifications_get_unread_notification_count(bp_loggedin_user_id())) : ?>
                         <a class="notifications" href="<?php echo bp_loggedin_user_domain(); ?>notifications" title="Unread Notifications"><?php echo bp_notifications_get_unread_notification_count(bp_loggedin_user_id()); ?></a>

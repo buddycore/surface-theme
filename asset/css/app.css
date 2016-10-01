@@ -379,6 +379,27 @@ header.global nav ul.sf-header li.nv-pages.close button:before {
   content: "\f00d";
 }
 
+header.global nav ul.sf-header li.nv-messages {
+  margin-left: 10px;
+}
+
+header.global nav ul.sf-header li.nv-messages a {
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+header.global nav ul.sf-header li.nv-messages span:before {
+  font-family: FontAwesome;
+  content: "\f003";
+  font-size: 14px;
+  font-weight: normal;
+}
+
 header.global nav ul.sf-header li.nv-account {
   margin-left: 10px;
   position: relative;
@@ -473,17 +494,32 @@ header.global nav ul.menu-pages, header.global nav ul.menu-account {
     height: 30px;
     line-height: 30px;
   }
-  header.global nav ul.sf-header li.nv-account a, header.global nav ul.sf-header li.nv-account button, header.global nav ul.sf-header li.nv-pages a, header.global nav ul.sf-header li.nv-pages button {
+  header.global nav ul.sf-header li.nv-account a, header.global nav ul.sf-header li.nv-account button, header.global nav ul.sf-header li.nv-pages a, header.global nav ul.sf-header li.nv-pages button, header.global nav ul.sf-header li.nv-messages a, header.global nav ul.sf-header li.nv-messages button {
     height: 30px;
     line-height: 30px;
   }
-  header.global nav ul.sf-header li.nv-account a img, header.global nav ul.sf-header li.nv-account a span.toggle, header.global nav ul.sf-header li.nv-account button img, header.global nav ul.sf-header li.nv-account button span.toggle, header.global nav ul.sf-header li.nv-pages a img, header.global nav ul.sf-header li.nv-pages a span.toggle, header.global nav ul.sf-header li.nv-pages button img, header.global nav ul.sf-header li.nv-pages button span.toggle {
+  header.global nav ul.sf-header li.nv-account a img, header.global nav ul.sf-header li.nv-account a span.toggle, header.global nav ul.sf-header li.nv-account button img, header.global nav ul.sf-header li.nv-account button span.toggle, header.global nav ul.sf-header li.nv-pages a img, header.global nav ul.sf-header li.nv-pages a span.toggle, header.global nav ul.sf-header li.nv-pages button img, header.global nav ul.sf-header li.nv-pages button span.toggle, header.global nav ul.sf-header li.nv-messages a img, header.global nav ul.sf-header li.nv-messages a span.toggle, header.global nav ul.sf-header li.nv-messages button img, header.global nav ul.sf-header li.nv-messages button span.toggle {
     height: 30px;
     width: 30px;
     line-height: 30px;
   }
-  header.global nav ul.sf-header li.nv-account a span.tx, header.global nav ul.sf-header li.nv-account button span.tx, header.global nav ul.sf-header li.nv-pages a span.tx, header.global nav ul.sf-header li.nv-pages button span.tx {
+  header.global nav ul.sf-header li.nv-account a span.tx, header.global nav ul.sf-header li.nv-account button span.tx, header.global nav ul.sf-header li.nv-pages a span.tx, header.global nav ul.sf-header li.nv-pages button span.tx, header.global nav ul.sf-header li.nv-messages a span.tx, header.global nav ul.sf-header li.nv-messages button span.tx {
     display: none;
+  }
+  header.global nav ul.sf-header li.nv-messages a {
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+  }
+  header.global nav ul.sf-header li.nv-messages span:before {
+    font-family: FontAwesome;
+    content: "\f003";
+    font-size: 14px;
+    font-weight: normal;
   }
   header.global nav ul.sf-header li.menu-item, header.global nav ul.sf-header li.search {
     display: none;
@@ -4381,4 +4417,32 @@ div#pass-strength-result.good {
 
 div#pass-strength-result.strong {
   color: #105b63;
+}
+
+div.min-requirements {
+  display: none;
+}
+
+@media screen and (max-width: 300px) {
+  div.min-requirements {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-weight: 900;
+    line-height: 22px;
+  }
+  div.min-requirements div.table {
+    display: table;
+    height: 100%;
+  }
+  div.min-requirements div.table div.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+  }
 }
