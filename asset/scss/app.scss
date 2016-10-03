@@ -227,7 +227,7 @@ header.global {
                     }
                 }
             } 
-            li.nv-messages {
+            li.nv-msg-notify {
                 margin-left: 10px;
                 a {
                     width: auto;
@@ -342,7 +342,7 @@ header.global {
                         line-height: 30px;
                     }
                 }
-                li.nv-account, li.nv-pages, li.nv-messages {
+                li.nv-account, li.nv-pages, li.nv-msg-notify {
                     a, button {
                         height: 30px;
                         line-height: 30px;
@@ -356,7 +356,7 @@ header.global {
                         }
                     }
                 }
-                li.nv-messages {
+                li.nv-msg-notify {
                     a {
                         width: auto;
                         height: 30px;

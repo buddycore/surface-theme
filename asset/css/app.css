@@ -379,11 +379,11 @@ header.global nav ul.sf-header li.nv-pages.close button:before {
   content: "\f00d";
 }
 
-header.global nav ul.sf-header li.nv-messages {
+header.global nav ul.sf-header li.nv-msg-notify {
   margin-left: 10px;
 }
 
-header.global nav ul.sf-header li.nv-messages a {
+header.global nav ul.sf-header li.nv-msg-notify a {
   width: auto;
   height: 40px;
   line-height: 40px;
@@ -393,7 +393,7 @@ header.global nav ul.sf-header li.nv-messages a {
   line-height: 40px;
 }
 
-header.global nav ul.sf-header li.nv-messages span:before {
+header.global nav ul.sf-header li.nv-msg-notify span:before {
   font-family: FontAwesome;
   content: "\f003";
   font-size: 14px;
@@ -494,19 +494,19 @@ header.global nav ul.menu-pages, header.global nav ul.menu-account {
     height: 30px;
     line-height: 30px;
   }
-  header.global nav ul.sf-header li.nv-account a, header.global nav ul.sf-header li.nv-account button, header.global nav ul.sf-header li.nv-pages a, header.global nav ul.sf-header li.nv-pages button, header.global nav ul.sf-header li.nv-messages a, header.global nav ul.sf-header li.nv-messages button {
+  header.global nav ul.sf-header li.nv-account a, header.global nav ul.sf-header li.nv-account button, header.global nav ul.sf-header li.nv-pages a, header.global nav ul.sf-header li.nv-pages button, header.global nav ul.sf-header li.nv-msg-notify a, header.global nav ul.sf-header li.nv-msg-notify button {
     height: 30px;
     line-height: 30px;
   }
-  header.global nav ul.sf-header li.nv-account a img, header.global nav ul.sf-header li.nv-account a span.toggle, header.global nav ul.sf-header li.nv-account button img, header.global nav ul.sf-header li.nv-account button span.toggle, header.global nav ul.sf-header li.nv-pages a img, header.global nav ul.sf-header li.nv-pages a span.toggle, header.global nav ul.sf-header li.nv-pages button img, header.global nav ul.sf-header li.nv-pages button span.toggle, header.global nav ul.sf-header li.nv-messages a img, header.global nav ul.sf-header li.nv-messages a span.toggle, header.global nav ul.sf-header li.nv-messages button img, header.global nav ul.sf-header li.nv-messages button span.toggle {
+  header.global nav ul.sf-header li.nv-account a img, header.global nav ul.sf-header li.nv-account a span.toggle, header.global nav ul.sf-header li.nv-account button img, header.global nav ul.sf-header li.nv-account button span.toggle, header.global nav ul.sf-header li.nv-pages a img, header.global nav ul.sf-header li.nv-pages a span.toggle, header.global nav ul.sf-header li.nv-pages button img, header.global nav ul.sf-header li.nv-pages button span.toggle, header.global nav ul.sf-header li.nv-msg-notify a img, header.global nav ul.sf-header li.nv-msg-notify a span.toggle, header.global nav ul.sf-header li.nv-msg-notify button img, header.global nav ul.sf-header li.nv-msg-notify button span.toggle {
     height: 30px;
     width: 30px;
     line-height: 30px;
   }
-  header.global nav ul.sf-header li.nv-account a span.tx, header.global nav ul.sf-header li.nv-account button span.tx, header.global nav ul.sf-header li.nv-pages a span.tx, header.global nav ul.sf-header li.nv-pages button span.tx, header.global nav ul.sf-header li.nv-messages a span.tx, header.global nav ul.sf-header li.nv-messages button span.tx {
+  header.global nav ul.sf-header li.nv-account a span.tx, header.global nav ul.sf-header li.nv-account button span.tx, header.global nav ul.sf-header li.nv-pages a span.tx, header.global nav ul.sf-header li.nv-pages button span.tx, header.global nav ul.sf-header li.nv-msg-notify a span.tx, header.global nav ul.sf-header li.nv-msg-notify button span.tx {
     display: none;
   }
-  header.global nav ul.sf-header li.nv-messages a {
+  header.global nav ul.sf-header li.nv-msg-notify a {
     width: auto;
     height: 30px;
     line-height: 30px;
@@ -515,7 +515,7 @@ header.global nav ul.menu-pages, header.global nav ul.menu-account {
     text-align: center;
     line-height: 30px;
   }
-  header.global nav ul.sf-header li.nv-messages span:before {
+  header.global nav ul.sf-header li.nv-msg-notify span:before {
     font-family: FontAwesome;
     content: "\f003";
     font-size: 14px;

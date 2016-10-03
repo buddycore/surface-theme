@@ -96,8 +96,8 @@
                     <?php get_search_form(); ?>
                 </li>
                 <?php if(is_user_logged_in()) : ?>
-                    <?php if(bp_get_total_unread_messages_count()) : ?>
-                        <li class="nv-messages">
+                    <?php if(get_theme_mod('sf_msg_link')) : ?>
+                        <li class="nv-msg-notify">
                             <a href="<?php echo bp_loggedin_user_domain(); ?>messages"><span></span></a>
                         </li>
                     <?php endif; ?>
