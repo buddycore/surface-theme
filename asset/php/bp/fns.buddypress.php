@@ -102,7 +102,7 @@ function sc_bp_message_status($msg_id){
 
     if($wpdb->num_rows > 0) :
 
-        echo '<div class="status"><strong>Seen:</strong> '.date('jS F, Y', strtotime($msg_status[0]->meta_value)).'</div>';
+        echo '<div class="status"><strong>Seen:</strong> '.date('jS F', strtotime($msg_status[0]->meta_value)).'</div>';
 
     else :
 
