@@ -387,17 +387,21 @@ header.global nav ul.sf-header li.nv-msg-notify a {
   width: auto;
   height: 40px;
   line-height: 40px;
-  padding: 0;
-  width: 40px;
   text-align: center;
-  line-height: 40px;
+  background: transparent;
+  padding: 0;
 }
 
-header.global nav ul.sf-header li.nv-msg-notify span:before {
+header.global nav ul.sf-header li.nv-msg-notify a:before {
   font-family: FontAwesome;
   content: "\f003";
   font-size: 14px;
   font-weight: normal;
+}
+
+header.global nav ul.sf-header li.nv-msg-notify span {
+  margin-left: 10px;
+  line-height: 28px;
 }
 
 header.global nav ul.sf-header li.nv-account {
@@ -505,21 +509,6 @@ header.global nav ul.menu-pages, header.global nav ul.menu-account {
   }
   header.global nav ul.sf-header li.nv-account a span.tx, header.global nav ul.sf-header li.nv-account button span.tx, header.global nav ul.sf-header li.nv-pages a span.tx, header.global nav ul.sf-header li.nv-pages button span.tx, header.global nav ul.sf-header li.nv-msg-notify a span.tx, header.global nav ul.sf-header li.nv-msg-notify button span.tx {
     display: none;
-  }
-  header.global nav ul.sf-header li.nv-msg-notify a {
-    width: auto;
-    height: 30px;
-    line-height: 30px;
-    padding: 0;
-    width: 30px;
-    text-align: center;
-    line-height: 30px;
-  }
-  header.global nav ul.sf-header li.nv-msg-notify span:before {
-    font-family: FontAwesome;
-    content: "\f003";
-    font-size: 14px;
-    font-weight: normal;
   }
   header.global nav ul.sf-header li.menu-item, header.global nav ul.sf-header li.search {
     display: none;

@@ -233,18 +233,19 @@ header.global {
                     width: auto;
                     height: 40px;
                     line-height: 40px;
-                    padding: 0;
-                    width: 40px;
                     text-align: center;
-                    line-height: 40px;
-                }
-                span {
+                    background: transparent;
+                    padding: 0;
                     &:before {
                         font-family: FontAwesome;
                         content: "\f003";
                         font-size: 14px;
                         font-weight: normal;
                     }
+                }
+                span {
+                    margin-left: 10px;
+                    line-height: 28px;
                 }
             }
             li.nv-account {
@@ -353,25 +354,6 @@ header.global {
                         }
                         span.tx {
                             display: none;
-                        }
-                    }
-                }
-                li.nv-msg-notify {
-                    a {
-                        width: auto;
-                        height: 30px;
-                        line-height: 30px;
-                        padding: 0;
-                        width: 30px;
-                        text-align: center;
-                        line-height: 30px;
-                    }
-                    span {
-                        &:before {
-                            font-family: FontAwesome;
-                            content: "\f003";
-                            font-size: 14px;
-                            font-weight: normal;
                         }
                     }
                 }

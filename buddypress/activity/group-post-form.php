@@ -11,7 +11,6 @@
 
             <?php if(bp_is_active('groups') && !bp_is_my_profile() && !bp_is_group()) : ?>
 
-
                 <input type="hidden" id="whats-new-post-object" name="whats-new-post-object" value="groups" />
 
             <?php elseif(bp_is_group_activity()) : ?>
