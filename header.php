@@ -98,7 +98,7 @@
                 <?php if(is_user_logged_in()) : ?>
                     <?php if(get_theme_mod('sf_msg_link')) : ?>
                         <li class="nv-msg-notify">
-                            <a href="<?php echo bp_loggedin_user_domain(); ?>messages"><span><?php bp_total_unread_messages_count(); ?></span></a>
+                            <a href="<?php echo bp_loggedin_user_domain(); ?>messages"><?php if(bp_get_total_unread_messages_count()) : ?><span><?php bp_total_unread_messages_count(); ?></span><?php endif; ?></a>
                         </li>
                     <?php endif; ?>
                 <li class="nv-account">
