@@ -924,21 +924,6 @@ div.message-box {
     }
 }
 
-@media screen and (max-width: 760px) {
-    div#message-thread {
-        div.title {
-            padding: 10px;
-        }
-    }
-    div.message-box {
-        div.message-metadata {
-            margin-bottom: 10px;
-        }
-        ul.options {
-            margin-top: 10px;
-        }
-    }
-}
 
 div.ac_results {
     display: block !important;
