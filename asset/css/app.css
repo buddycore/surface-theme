@@ -4229,9 +4229,6 @@ div.message-box ul.options li a.message-action-star:before {
   div#message-thread div.title {
     padding: 10px;
   }
-  div.message-box {
-    padding: 10px;
-  }
   div.message-box div.message-metadata {
     margin-bottom: 10px;
   }
