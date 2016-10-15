@@ -1,7 +1,8 @@
 $(document).ready(function(){   
 
+
     // TABS | SIDEBAR
-    $('div.tabs').tabs();
+    $('div.tabs, div.inner-tabs, div.widget-tabs').tabs();
 
     $('html').on('click', function(e){
 

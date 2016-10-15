@@ -6,6 +6,7 @@ locate_template('/asset/php/wp/sidebars.php', true, true);
 locate_template('/asset/php/wp/config.php', true, true);
 locate_template('/asset/php/wp/walker.class.php', true, true);
 locate_template('/asset/php/wp/login.custom.php', true, true);
+locate_template('/asset/php/wp/extra.php', true, true);
 locate_template('/asset/php/bp/init.buddypress.php', true, true);
 locate_template('/asset/php/bp/fns.buddypress.php', true, true);
 

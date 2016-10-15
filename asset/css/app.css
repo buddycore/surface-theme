@@ -708,6 +708,54 @@ footer.global nav p {
   }
 }
 
+div.koverlay {
+  background: rgba(255, 255, 255, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+div.koverlay span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+div.koverlay span:before {
+  content: "\f00d";
+  font-family: FontAwesome;
+  font-size: 14px;
+  border: 1px solid #CCC;
+  height: 40px;
+  width: 40px;
+  display: block;
+  line-height: 38px;
+  text-align: center;
+}
+
+div.koverlay audio {
+  visibility: hidden;
+}
+
+div.koverlay div.kinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+
+div.koverlay div.kinner iframe {
+  padding: 0;
+  border: none;
+  z-index: 100;
+  background: #FFF;
+  z-index: 100;
+}
+
 .one-half {
   width: 50%;
 }
@@ -1940,6 +1988,146 @@ aside.global div.tabs.quarters ul.tabs-nav li {
   width: 25%;
 }
 
+aside.global div.widget-tabs ul.widget-tabs-nav {
+  margin-bottom: 20px;
+  overflow-y: hidden;
+}
+
+aside.global div.widget-tabs ul.widget-tabs-nav li {
+  float: left;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+aside.global div.widget-tabs ul.widget-tabs-nav li a {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+aside.global div.widget-tabs ul.widget-tabs-nav li.ui-state-active a {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+aside.global div.widget-tabs div.tabs-panel {
+  overflow: hidden;
+}
+
+aside.global div.widget-tabs div.tabs-panel ul.avatars {
+  margin: -5px;
+  overflow: hidden;
+}
+
+aside.global div.widget-tabs div.tabs-panel ul.avatars li {
+  width: 25%;
+  padding: 5px;
+  float: left;
+}
+
+aside.global div.widget-tabs div.tabs-panel ul.avatars li a img {
+  padding: 2px;
+  background: #FFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav {
+  margin-bottom: 20px;
+  overflow-y: hidden;
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav li {
+  float: left;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav li a {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav li a span {
+  display: none;
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav li a:before {
+  font-family: FontAwesome;
+  font-size: 14px;
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav li.nv-news a:before {
+  content: "\f1ea";
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav li.nv-members a:before {
+  content: "\f007";
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav li.nv-groups a:before {
+  content: "\f0c0";
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav li.nv-links a:before {
+  content: "\f0c1";
+}
+
+aside.global div.inner-tabs ul.inner-tabs-nav li.ui-state-active a {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+aside.global div.inner-tabs div.tabs-panel {
+  padding: 0 !important;
+}
+
+aside.global div.inner-tabs ul.link-list li a {
+  display: block;
+  font-weight: 900;
+}
+
+aside.global div.inner-tabs ul.news-list li:last-child, aside.global div.inner-tabs ul.link-list li:last-child {
+  margin-bottom: 0;
+}
+
+aside.global div.inner-tabs ul.news-list li, aside.global div.inner-tabs ul.link-list li {
+  margin-bottom: 10px;
+}
+
+aside.global div.inner-tabs ul.news-list li a, aside.global div.inner-tabs ul.link-list li a {
+  display: block;
+}
+
+aside.global div.inner-tabs ul.news-list li a span, aside.global div.inner-tabs ul.link-list li a span {
+  display: block;
+}
+
+aside.global div.inner-tabs ul.news-list li a span.title, aside.global div.inner-tabs ul.link-list li a span.title {
+  font-weight: 900;
+}
+
+aside.global div.inner-tabs ul.news-list li a span.ex, aside.global div.inner-tabs ul.link-list li a span.ex {
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 22px;
+  font-size: 12px;
+}
+
+aside.global div.tabs ul li {
+  outline: none !important;
+  border: none !important;
+}
+
+aside.global div.tabs ul li a {
+  outline: none !important;
+  border: none !important;
+}
+
 aside.global div.tabs {
   background: #FFF;
 }
@@ -1978,6 +2166,10 @@ aside.global div.tabs ul.tabs-nav li a:before {
 
 aside.global div.tabs ul.tabs-nav li.download a:before {
   content: "\f019";
+}
+
+aside.global div.tabs ul.tabs-nav li.nv-social a:before {
+  content: "\f1e0";
 }
 
 aside.global div.tabs ul.tabs-nav li.login a:before {

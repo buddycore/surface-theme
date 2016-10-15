@@ -560,6 +560,49 @@ footer.global {
     }
 }
 
+div.koverlay {
+    background: rgba(255, 255, 255, .75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    span {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        &:before {
+            content: "\f00d";
+            font-family: FontAwesome;
+            font-size: 14px;
+            border: 1px solid #CCC;
+            height: 40px;
+            width: 40px;
+            display: block;
+            line-height: 38px;
+            text-align: center;
+        }
+    }
+    audio {
+        visibility: hidden;
+    }
+    div.kinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 50;
+        iframe {
+            padding: 0;
+            border: none;
+            z-index: 100;
+            background: #FFF;
+            z-index: 100;
+        }
+    }
+}
+
 @import "partial/grid.scss";
 @import "partial/standardise.scss";
 
