@@ -2032,6 +2032,22 @@ aside.global div.widget-tabs div.tabs-panel ul.avatars li a img {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+aside.global div.widget-tabs div.tabs-panel ul.avatars li.online {
+  position: relative;
+}
+
+aside.global div.widget-tabs div.tabs-panel ul.avatars li.online:after {
+  width: 15px;
+  height: 15px;
+  background: #4CAF50;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  opacity: .85;
+}
+
 aside.global div.inner-tabs ul.inner-tabs-nav {
   margin-bottom: 20px;
   overflow-y: hidden;

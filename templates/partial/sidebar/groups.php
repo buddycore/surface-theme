@@ -1,67 +1,28 @@
 <div class="widget-tabs">
     <ul class="widget-tabs-nav">
-        <li><a href="#g1">Newest</a></li>
-        <li><a href="#g2">Popular</a></li>
-        <li><a href="#g3">Last Active</a></li>
+        <li><a href="#w1">Newest</a></li>
+        <li><a href="#w2">Popular</a></li>
+        <li><a href="#w3">Last Active</a></li>
     </ul>
-    <div id="g1" class="tabs-panel">
-         <ul class="avatars">
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-        </ul>
-    </div>
-    <div id="g2" class="tabs-panel">
+    <div id="w1" class="tabs-panel">
         <ul class="avatars">
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
+        <?php if(bp_has_groups('type=newest&per_page=16')) : while(bp_groups()) : bp_the_group(); ?>
+            <li><a href="<?php bp_group_permalink(); ?>"><?php bp_group_avatar('type=full&width=250'); ?></a></li>
+        <?php endwhile; endif; ?>
         </ul>
     </div>
-    <div id="g3" class="tabs-panel">
+    <div id="w2" class="tabs-panel">
         <ul class="avatars">
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
-            <li><a href="#"><img src="<?php echo asset_url('img/default/group.png'); ?>" alt=""></a></li>
+        <?php if(bp_has_groups('type=newest&per_page=16')) : while(bp_groups()) : bp_the_group(); ?>
+            <li><a href="<?php bp_group_permalink(); ?>"><?php bp_group_avatar('type=full&width=250'); ?></a></li>
+        <?php endwhile; endif; ?>
         </ul>
-    </div>
-</div>
+    </div><!-- PANEL -->
+    <div id="w3" class="tabs-panel">
+        <ul class="avatars">
+        <?php if(bp_has_groups('type=newest&per_page=16')) : while(bp_groups()) : bp_the_group(); ?>
+            <li><a href="<?php bp_group_permalink(); ?>"><?php bp_group_avatar('type=full&width=250'); ?></a></li>
+        <?php endwhile; endif; ?>
+        </ul>
+    </div><!-- PANEL -->
+</div><!-- TABS -->

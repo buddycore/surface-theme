@@ -107,6 +107,20 @@ aside.global {
                         }
                     }
                 }
+                li.online {
+                    position: relative;
+                    &:after {
+                        width: 15px;
+                        height: 15px;
+                        background: palette(Green, 500);
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        bottom: 8px;
+                        right: 8px;
+                        opacity: .85;
+                    }
+                }
             }
         }
     }
