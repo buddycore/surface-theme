@@ -160,6 +160,42 @@ function sc_customizer($wp_customize){
         'type'      => 'textarea'
     )));
 
+
+
+    // DEV NOTICE & SCRIPTS
+    $wp_customize->add_panel('sf_panel_3',
+        array(
+            'title'          => 'Sidebar',
+            'description'    => 'RSS Feeds and Active Widgets',
+            'capability'     => 'manage_options',
+            'theme-supports' => '',
+            'priority'       => '20'
+        )
+    );
+
+    $wp_customize->add_section('sf_sidebar_section_rss', array(
+        'title'          => 'RSS Feeds',
+        'description'   => 'Supply some RSS Feeds for the Sidebar',
+        'theme-supports'    => '',
+        'priority'          => '10',
+        'panel'             => 'sf_panel_3'
+    ));
+
+    // EMBED
+    for($i = 1; $i < 5; $i++) :
+
+        $wp_customize->add_setting('sf_rss_'.$i, array(
+            'transport' => 'postMessage'
+        ));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'sf_rss_'.$i, array(
+            'label'      => __('Feed '.$i, 'sc'),
+            'section'    => 'sf_sidebar_section_rss',
+            'settings'   => 'sf_rss_'.$i,
+            'type'      => 'text'
+        )));
+
+    endfor;
+    
 }
 add_action('customize_register', 'sc_customizer');
 
