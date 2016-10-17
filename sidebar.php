@@ -34,7 +34,7 @@
             </div><!-- PANEL -->
             <div class="tabs-panel categories" id="t2">
                 
-                <?php locate_template('templates/partial/categories/social.php', true, true); ?>
+                <?php locate_template('templates/partial/sidebar/categories.php', true, true); ?>
 
             </div><!-- PANEL -->
             <div class="tabs-panel tags" id="t3">
