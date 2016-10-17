@@ -2051,7 +2051,6 @@ aside.global div.inner-tabs ul.inner-tabs-nav li a {
   line-height: 30px;
   display: block;
   color: rgba(0, 0, 0, 0.5);
-  border-radius: 100%;
 }
 
 aside.global div.inner-tabs ul.inner-tabs-nav li a span {
@@ -2063,8 +2062,8 @@ aside.global div.inner-tabs ul.inner-tabs-nav li a:before {
   font-size: 14px;
 }
 
-aside.global div.inner-tabs ul.inner-tabs-nav li.nv-news a:before {
-  content: "\f1ea";
+aside.global div.inner-tabs ul.inner-tabs-nav li.nv-rss a:before {
+  content: "\f09e";
 }
 
 aside.global div.inner-tabs ul.inner-tabs-nav li.nv-members a:before {
@@ -2092,30 +2091,79 @@ aside.global div.inner-tabs ul.link-list li a {
   font-weight: 900;
 }
 
-aside.global div.inner-tabs ul.news-list li:last-child, aside.global div.inner-tabs ul.link-list li:last-child {
+aside.global div.inner-tabs h6 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25) !important;
+}
+
+aside.global div.inner-tabs h6 span {
+  font-size: 10px;
+  display: block;
+  margin-top: 10px;
+}
+
+aside.global div.inner-tabs h6 span a {
+  display: inline;
+}
+
+aside.global div.inner-tabs h6 span a:before {
+  content: "\f08e";
+  font-family: FontAwesome;
+  font-size: 14px;
+  margin-right: 5px;
+  float: left;
+  margin: -2px 5px 0 0;
+}
+
+aside.global div.inner-tabs ul.rss-list li:last-child, aside.global div.inner-tabs ul.link-list li:last-child {
   margin-bottom: 0;
 }
 
-aside.global div.inner-tabs ul.news-list li, aside.global div.inner-tabs ul.link-list li {
+aside.global div.inner-tabs ul.rss-list li, aside.global div.inner-tabs ul.link-list li {
   margin-bottom: 10px;
 }
 
-aside.global div.inner-tabs ul.news-list li a, aside.global div.inner-tabs ul.link-list li a {
+aside.global div.inner-tabs ul.rss-list li a, aside.global div.inner-tabs ul.link-list li a {
   display: block;
 }
 
-aside.global div.inner-tabs ul.news-list li a span, aside.global div.inner-tabs ul.link-list li a span {
+aside.global div.inner-tabs ul.rss-list li a span, aside.global div.inner-tabs ul.link-list li a span {
   display: block;
 }
 
-aside.global div.inner-tabs ul.news-list li a span.title, aside.global div.inner-tabs ul.link-list li a span.title {
-  font-weight: 900;
+aside.global div.inner-tabs ul.rss-list li a span.title, aside.global div.inner-tabs ul.link-list li a span.title {
+  font-weight: 700;
+  line-height: 18px;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-aside.global div.inner-tabs ul.news-list li a span.ex, aside.global div.inner-tabs ul.link-list li a span.ex {
+aside.global div.inner-tabs ul.rss-list li a span.date, aside.global div.inner-tabs ul.link-list li a span.date {
   color: rgba(0, 0, 0, 0.7);
   line-height: 22px;
   font-size: 12px;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+aside.global div.inner-tabs ul.rss-list li.provider, aside.global div.inner-tabs ul.link-list li.provider {
+  font-size: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15) !important;
+  padding-top: 20px;
+  overflow-y: hidden;
+}
+
+aside.global div.inner-tabs ul.rss-list li.provider a, aside.global div.inner-tabs ul.link-list li.provider a {
+  display: inline;
+}
+
+aside.global div.inner-tabs ul.rss-list li.provider a:before, aside.global div.inner-tabs ul.link-list li.provider a:before {
+  content: "\f08e";
+  font-family: FontAwesome;
+  font-size: 14px;
+  margin-right: 5px;
+  float: left;
+  margin: -2px 5px 0 0;
 }
 
 aside.global div.tabs ul li {

@@ -1,3 +1,14 @@
+<?php 
+require_once('asset/php/simplepie/autoloader.php');
+$rssFeed = 'https://www.reddit.com/r/funny.rss';
+$feed = new SimplePie();
+$feed->set_feed_url($rssFeed);
+$feed->init();
+$feed->handle_content_type();
+?>
+
+
+
 <aside class="global">
 
     <div class="widgets">
@@ -16,64 +27,13 @@
                 
                 <div class="inner-tabs">
                     <ul class="inner-tabs-nav">
-                        <li class="nv-news"><a href="#i1" title="News Feed"><span>News</span></a></li>
-                        <li class="nv-members"><a href="#i2" title="Members"><span>Members</span></a></li>
-                        <li class="nv-groups"><a href="#i3" title="Groups"><span>Groups</span></a></li>
-                        <li class="nv-links"><a href="#i4" title="Links"><span>Links</span></a></li>
+                        <li class="nv-members"><a href="#i1" title="Members"><span>Members</span></a></li>
+                        <li class="nv-groups"><a href="#i2" title="Groups"><span>Groups</span></a></li>
+                        <li class="nv-links"><a href="#i3" title="Links"><span>Links</span></a></li>
+                        <li class="nv-rss"><a href="#i4" title="News Feed"><span>News</span></a></li>
                     </ul>
+                    
                     <div id="i1" class="tabs-panel">
-                        <ul class="news-list">
-                            <li>
-                                <a href="#">
-                                    <span class="title">News Headline here</span>
-                                    <span class="ex">Short excert of the headline here to no more than this.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">News Headline here</span>
-                                    <span class="ex">Short excert of the headline here to no more than this.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">News Headline here</span>
-                                    <span class="ex">Short excert of the headline here to no more than this.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">News Headline here</span>
-                                    <span class="ex">Short excert of the headline here to no more than this.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">News Headline here</span>
-                                    <span class="ex">Short excert of the headline here to no more than this.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">News Headline here</span>
-                                    <span class="ex">Short excert of the headline here to no more than this.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">News Headline here</span>
-                                    <span class="ex">Short excert of the headline here to no more than this.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">News Headline here</span>
-                                    <span class="ex">Short excert of the headline here to no more than this.</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="i2" class="tabs-panel">
                         <div class="widget-tabs">
                             <ul class="widget-tabs-nav">
                                 <li><a href="#w1">Newest</a></li>
@@ -142,7 +102,7 @@
                             </div><!-- PANEL -->
                         </div><!-- TABS -->
                     </div><!-- TAB -->
-                    <div id="i3" class="tabs-panel">
+                    <div id="i2" class="tabs-panel">
                         <div class="widget-tabs">
                             <ul class="widget-tabs-nav">
                                 <li><a href="#g1">Newest</a></li>
@@ -211,12 +171,71 @@
                             </div>
                         </div>
                     </div>
-                    <div id="i4" class="tabs-panel">
+                    <div id="i3" class="tabs-panel">
                         <ul class="link-list">
                             <li><a href="#">Download Surface Theme</a></li>
                             <li><a href="#">Change Profile Avatar</a></li>
                             <li><a href="#">Post a Status Update</a></li>
                         </ul>
+                    </div>
+
+                    <div id="i4" class="tabs-panel">
+
+                        <div class="widget-tabs">
+                            <ul class="widget-tabs-nav">
+                                <li><a href="#rss1">Feed 1</a></li>
+                                <li><a href="#rss2">Feed 2</a></li>
+                                <li><a href="#rss3">Feed 3</a></li>
+                            </ul>
+                            <div id="rss1" class="tabs-panel">
+                                <h6>RSS Feed 1 <span><a href="<?php echo str_replace('.rss', '', $rssFeed); ?>" target="_blank"><?php echo str_replace('.rss', '', $rssFeed); ?></a></span></h6>
+
+                                <ul class="rss-list">
+                                    <?php foreach($feed->get_items(0, 6) as $item) : ?>
+
+                                    <li>
+                                        <a href="<?php echo $item->get_permalink(); ?>" target="_blank">
+                                            <span class="title"><?php echo substr($item->get_title(), 0, 75); ?><?php if(strlen($item->get_title()) > 75) : echo '...'; endif; ?></span>
+                                            <span class="date"><?php echo $item->get_date('j F Y | g:i a'); ?></span>
+                                        </a>
+                                    </li>
+
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div><!-- PANEL -->
+                            <div id="rss2" class="tabs-panel">
+                                <h6>RSS Feed 2 <span><a href="<?php echo str_replace('.rss', '', $rssFeed); ?>" target="_blank"><?php echo str_replace('.rss', '', $rssFeed); ?></a></span></h6>
+
+                                <ul class="rss-list">
+                                    <?php foreach($feed->get_items(0, 6) as $item) : ?>
+
+                                    <li>
+                                        <a href="<?php echo $item->get_permalink(); ?>" target="_blank">
+                                            <span class="title"><?php echo substr($item->get_title(), 0, 75); ?><?php if(strlen($item->get_title()) > 75) : echo '...'; endif; ?></span>
+                                            <span class="date"><?php echo $item->get_date('j F Y | g:i a'); ?></span>
+                                        </a>
+                                    </li>
+
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div><!-- PANEL -->
+                            <div id="rss3" class="tabs-panel">
+                                <h6>RSS Feed 3 <span><a href="<?php echo str_replace('.rss', '', $rssFeed); ?>" target="_blank"><?php echo str_replace('.rss', '', $rssFeed); ?></a></span></h6>
+
+                                <ul class="rss-list">
+                                    <?php foreach($feed->get_items(0, 6) as $item) : ?>
+
+                                    <li>
+                                        <a href="<?php echo $item->get_permalink(); ?>" target="_blank">
+                                            <span class="title"><?php echo substr($item->get_title(), 0, 75); ?><?php if(strlen($item->get_title()) > 75) : echo '...'; endif; ?></span>
+                                            <span class="date"><?php echo $item->get_date('j F Y | g:i a'); ?></span>
+                                        </a>
+                                    </li>
+
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div><!-- PANEL -->
+                        </div><!-- WIDGET -->
                     </div>
                 </div>
             </div>

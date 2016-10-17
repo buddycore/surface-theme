@@ -126,7 +126,6 @@ aside.global {
                     line-height: 30px;
                     display: block;
                     color: rgba(0, 0, 0, .5);
-                    border-radius: 100%;
                     span {
                         display: none;
                     }
@@ -136,10 +135,10 @@ aside.global {
                     }
                 }
             }
-            li.nv-news {
+            li.nv-rss {
                 a {
                     &:before {
-                        content: "\f1ea";
+                        content: "\f09e";
                     }
                 }
             }
@@ -181,7 +180,28 @@ aside.global {
                 }
             }
         }
-        ul.news-list, ul.link-list {
+        h6 {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, .25) !important;
+            span {
+                font-size: 10px;
+                display: block;
+                margin-top: 10px;
+                a {
+                    display: inline;
+                    &:before {
+                        content: "\f08e";
+                        font-family: FontAwesome;
+                        font-size: 14px;
+                        margin-right: 5px;
+                        float: left;
+                        margin: -2px 5px 0 0;
+                    }
+                }
+            }
+        }
+        ul.rss-list, ul.link-list {
             li:last-child {
                 margin-bottom: 0;
             }
@@ -193,12 +213,33 @@ aside.global {
                         display: block;
                     }
                     span.title {
-                        font-weight: 900;
+                        font-weight: 700;
+                        line-height: 18px;
+                        font-family: 'Titillium Web', sans-serif;
                     }
-                    span.ex {
+                    span.date {
                         color: rgba(0, 0, 0, .7);
                         line-height: 22px;
                         font-size: 12px;
+                        font-weight: 700;
+                        font-family: 'Titillium Web', sans-serif;
+                    }
+                }
+            }
+            li.provider {
+                font-size: 10px;
+                border-top: 1px solid rgba(0, 0, 0, .15) !important;
+                padding-top: 20px;
+                overflow-y: hidden;
+                a {
+                    display: inline;
+                    &:before {
+                        content: "\f08e";
+                        font-family: FontAwesome;
+                        font-size: 14px;
+                        margin-right: 5px;
+                        float: left;
+                        margin: -2px 5px 0 0;
                     }
                 }
             }
