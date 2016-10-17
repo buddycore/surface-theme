@@ -1,6 +1,6 @@
 <div class="widget-tabs">
     <ul class="widget-tabs-nav">
-        <li><a href="#w1">Newest</a></li>
+        <li><a href="#w1">New</a></li>
         <?php if(bp_has_members('type=online&per_page=16')) : ?>
         <li><a href="#w2">Online</a></li>
         <?php endif; ?>

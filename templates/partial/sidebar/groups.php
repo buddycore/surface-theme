@@ -1,6 +1,6 @@
 <div class="widget-tabs">
     <ul class="widget-tabs-nav">
-        <li><a href="#w1">Newest</a></li>
+        <li><a href="#w1">New</a></li>
         <li><a href="#w2">Popular</a></li>
         <li><a href="#w3">Active</a></li>
     </ul>
