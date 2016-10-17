@@ -1,6 +1,6 @@
 <?php 
 require_once('asset/php/simplepie/autoloader.php');
-$rssFeed = 'https://www.reddit.com/r/funny.rss';
+$rssFeed = 'https://wordpress.org/news/feed/';
 $feed = new SimplePie();
 $feed->set_feed_url($rssFeed);
 $feed->init();
