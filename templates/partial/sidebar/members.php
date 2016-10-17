@@ -5,7 +5,7 @@
         <li><a href="#w2">Online</a></li>
         <?php endif; ?>
         <li><a href="#w3">Popular</a></li>
-        <li><a href="#w4">Last Active</a></li>
+        <li><a href="#w4">Active</a></li>
     </ul>
     <div id="w1" class="tabs-panel">
         <ul class="avatars">

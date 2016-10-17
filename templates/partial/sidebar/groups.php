@@ -2,7 +2,7 @@
     <ul class="widget-tabs-nav">
         <li><a href="#w1">Newest</a></li>
         <li><a href="#w2">Popular</a></li>
-        <li><a href="#w3">Last Active</a></li>
+        <li><a href="#w3">Active</a></li>
     </ul>
     <div id="w1" class="tabs-panel">
         <ul class="avatars">
