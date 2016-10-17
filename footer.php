@@ -18,12 +18,6 @@
 </div><!-- CANVAS -->
 <?php wp_footer(); ?>
 
-<?php if(get_theme_mod('sf_sticky_header')) : ?>
-<style>
-    html body { background-attachment: fixed; }
-</style>
-<?php endif; ?>
-
 <script>
 <?php if(get_theme_mod('sf_sticky_header')) : ?>
 
