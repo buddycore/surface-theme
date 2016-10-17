@@ -168,7 +168,7 @@ html {
 
 html body {
   /* TILES AVAILABLE, INTEGRATE TO CUSTOMIZER */
-  background: #E0E0E0;
+  background: #E0E0E0 url(../img/interface/sdw.png) repeat-x top left;
   /*background: palette(Grey, 300) url(../img/tile/shattered-dark.png);*/
   color: #616161;
   font-family: 'Roboto', sans-serif;
