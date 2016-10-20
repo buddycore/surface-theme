@@ -97,9 +97,11 @@
                 </li>
                 <?php if(is_user_logged_in()) : ?>
                     <?php if(get_theme_mod('sf_msg_link')) : ?>
+                        <?php if(bp_get_total_unread_messages_count()) : ?>
                         <li class="nv-msg-notify">
                             <a href="<?php echo bp_loggedin_user_domain(); ?>messages"><?php if(bp_get_total_unread_messages_count()) : ?><span><?php bp_total_unread_messages_count(); ?></span><?php endif; ?></a>
                         </li>
+                        <?php endif; ?>
                     <?php endif; ?>
                 <li class="nv-account">
                     <?php if(bp_is_active('notifications') && bp_notifications_get_unread_notification_count(bp_loggedin_user_id())) : ?>

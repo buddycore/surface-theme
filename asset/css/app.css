@@ -378,11 +378,19 @@ header.global nav ul.sf-header li.nv-pages.close button:before {
   content: "\f00d";
 }
 
+header.global nav ul.sf-header li.nv-msg-notify {
+  margin: 0 0 0 10px;
+}
+
+header.global nav ul.sf-header li.nv-account > a.notifications {
+  margin: 0 10px 0 0 !important;
+}
+
 header.global nav ul.sf-header li.nv-msg-notify a {
   background: transparent;
   position: relative;
-  margin: 0 10px;
-  padding: 0 5px;
+  margin: 0;
+  padding: 0 15px 0 0;
   display: block;
 }
 
@@ -404,7 +412,7 @@ header.global nav ul.sf-header li.nv-msg-notify a:before {
 header.global nav ul.sf-header li.nv-msg-notify a span {
   position: absolute;
   top: 7px;
-  right: -15px;
+  right: 0;
   background: #D32F2F;
   border: 1px solid #C62828;
   color: rgba(255, 255, 255, 0.75) !important;
@@ -425,8 +433,8 @@ header.global nav ul.sf-header li.nv-account {
 header.global nav ul.sf-header li.nv-account > a.notifications {
   background: transparent;
   position: relative;
-  margin: 0 25px 0 0;
-  padding: 0 5px;
+  margin: 0;
+  padding: 0 15px 0 0;
   display: block;
 }
 
@@ -439,7 +447,7 @@ header.global nav ul.sf-header li.nv-account > a.notifications:before {
 header.global nav ul.sf-header li.nv-account > a.notifications span {
   position: absolute;
   top: 7px;
-  right: -15px;
+  right: 0;
   background: #D32F2F;
   border: 1px solid #C62828;
   color: rgba(255, 255, 255, 0.75) !important;

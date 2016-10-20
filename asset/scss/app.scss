@@ -227,11 +227,22 @@ header.global {
                 }
             } 
             li.nv-msg-notify {
+                margin: 0 0 0 10px;
+                a {
+
+                }
+            }
+            li.nv-account {
+                > a.notifications {
+                    margin: 0 10px 0 0 !important;
+                }
+            }
+            li.nv-msg-notify {
                 a {
                     background: transparent;
                     position: relative;
-                    margin: 0 10px;
-                    padding: 0 5px;
+                    margin: 0;
+                    padding: 0 15px 0 0;
                     display: block;
                     &:before {
                         background: url(../img/interface/messages.png) center no-repeat;
@@ -249,7 +260,7 @@ header.global {
                     span {
                         position: absolute;
                         top: 7px;
-                        right: -15px;
+                        right: 0;
                         background: palette(Red, 700);
                         border: 1px solid palette(Red, 800);
                         color: rgba(255, 255, 255, .75) !important;
@@ -269,8 +280,8 @@ header.global {
                 > a.notifications {
                     background: transparent;
                     position: relative;
-                    margin: 0 25px 0 0;
-                    padding: 0 5px;
+                    margin: 0;
+                    padding: 0 15px 0 0;
                     display: block;
                     &:before {
                         content: "\f0ac";
@@ -280,7 +291,7 @@ header.global {
                     span {
                         position: absolute;
                         top: 7px;
-                        right: -15px;
+                        right: 0;
                         background: palette(Red, 700);
                         border: 1px solid palette(Red, 800);
                         color: rgba(255, 255, 255, .75) !important;
