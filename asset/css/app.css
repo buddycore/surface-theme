@@ -405,8 +405,9 @@ header.global nav ul.sf-header li.nv-msg-notify a span {
   position: absolute;
   top: 7px;
   right: -15px;
-  background: rgba(255, 255, 255, 0.25);
-  color: rgba(0, 0, 0, 0.5) !important;
+  background: #D32F2F;
+  border: 1px solid #C62828;
+  color: rgba(255, 255, 255, 0.75) !important;
   font-weight: bold !important;
   height: auto;
   line-height: normal;
@@ -439,8 +440,9 @@ header.global nav ul.sf-header li.nv-account > a.notifications span {
   position: absolute;
   top: 7px;
   right: -15px;
-  background: rgba(255, 255, 255, 0.25);
-  color: rgba(0, 0, 0, 0.5) !important;
+  background: #D32F2F;
+  border: 1px solid #C62828;
+  color: rgba(255, 255, 255, 0.75) !important;
   font-weight: bold !important;
   height: auto;
   line-height: normal;
