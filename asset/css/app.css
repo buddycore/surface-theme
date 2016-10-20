@@ -378,29 +378,42 @@ header.global nav ul.sf-header li.nv-pages.close button:before {
   content: "\f00d";
 }
 
-header.global nav ul.sf-header li.nv-msg-notify {
-  margin-left: 10px;
-}
-
 header.global nav ul.sf-header li.nv-msg-notify a {
-  width: auto;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
   background: transparent;
-  padding: 0;
+  position: relative;
+  margin: 0 10px;
+  padding: 0 5px;
+  display: block;
 }
 
 header.global nav ul.sf-header li.nv-msg-notify a:before {
-  font-family: FontAwesome;
-  content: "\f003";
-  font-size: 14px;
-  font-weight: normal;
+  background: url(../img/interface/messages.png) center no-repeat;
+  content: "";
+  width: 16px;
+  height: 40px;
+  display: block;
+  opacity: .5;
 }
 
-header.global nav ul.sf-header li.nv-msg-notify span {
-  margin-left: 10px;
-  line-height: 28px;
+@media screen and (max-width: 900px) {
+  header.global nav ul.sf-header li.nv-msg-notify a:before {
+    height: 30px;
+  }
+}
+
+header.global nav ul.sf-header li.nv-msg-notify a span {
+  position: absolute;
+  top: 7px;
+  right: -15px;
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(0, 0, 0, 0.5) !important;
+  font-weight: bold !important;
+  height: auto;
+  line-height: normal;
+  padding: 2px 4px;
+  color: #FFF;
+  border-radius: 2px;
+  font-size: 8px;
 }
 
 header.global nav ul.sf-header li.nv-account {
@@ -409,10 +422,32 @@ header.global nav ul.sf-header li.nv-account {
 }
 
 header.global nav ul.sf-header li.nv-account > a.notifications {
-  min-width: 40px;
-  padding: 0;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.4);
+  background: transparent;
+  position: relative;
+  margin: 0 25px 0 0;
+  padding: 0 5px;
+  display: block;
+}
+
+header.global nav ul.sf-header li.nv-account > a.notifications:before {
+  content: "\f0ac";
+  font-family: FontAwesome;
+  font-size: 18px;
+}
+
+header.global nav ul.sf-header li.nv-account > a.notifications span {
+  position: absolute;
+  top: 7px;
+  right: -15px;
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(0, 0, 0, 0.5) !important;
+  font-weight: bold !important;
+  height: auto;
+  line-height: normal;
+  padding: 2px 4px;
+  color: #FFF;
+  border-radius: 2px;
+  font-size: 8px;
 }
 
 @media screen and (max-width: 900px) {

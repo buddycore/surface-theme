@@ -103,7 +103,7 @@
                     <?php endif; ?>
                 <li class="nv-account">
                     <?php if(bp_is_active('notifications') && bp_notifications_get_unread_notification_count(bp_loggedin_user_id())) : ?>
-                        <a class="notifications" href="<?php echo bp_loggedin_user_domain(); ?>notifications" title="Unread Notifications"><?php echo bp_notifications_get_unread_notification_count(bp_loggedin_user_id()); ?></a>
+                        <a class="notifications" href="<?php echo bp_loggedin_user_domain(); ?>notifications" title="Unread Notifications"><span><?php echo bp_notifications_get_unread_notification_count(bp_loggedin_user_id()); ?></span></a>
                     <?php endif; ?>
                     <a href="<?php echo bp_loggedin_user_domain(); ?>">
                         <?php bp_loggedin_user_avatar('width=60&height=60'); ?>

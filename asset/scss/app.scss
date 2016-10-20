@@ -227,34 +227,69 @@ header.global {
                 }
             } 
             li.nv-msg-notify {
-                margin-left: 10px;
                 a {
-                    width: auto;
-                    height: 40px;
-                    line-height: 40px;
-                    text-align: center;
                     background: transparent;
-                    padding: 0;
+                    position: relative;
+                    margin: 0 10px;
+                    padding: 0 5px;
+                    display: block;
                     &:before {
-                        font-family: FontAwesome;
-                        content: "\f003";
-                        font-size: 14px;
-                        font-weight: normal;
+                        background: url(../img/interface/messages.png) center no-repeat;
+                        content: "";
+                        width: 16px;
+                        height: 40px;
+                        display: block;
+                        opacity: .5;
                     }
-                }
-                span {
-                    margin-left: 10px;
-                    line-height: 28px;
+                    @media screen and (max-width: 900px) {
+                        &:before {
+                            height: 30px;
+                        }
+                    }
+                    span {
+                        position: absolute;
+                        top: 7px;
+                        right: -15px;
+                        background: rgba(255, 255, 255, .25);
+                        color: rgba(0, 0, 0, .5) !important;
+                        font-weight: bold !important;
+                        height: auto;
+                        line-height: normal;
+                        padding: 2px 4px;
+                        color: #FFF;
+                        border-radius: 2px;
+                        font-size: 8px;
+                    }
                 }
             }
             li.nv-account {
                 margin-left: 10px;
                 position: relative;
                 > a.notifications {
-                    min-width: 40px;
-                    padding: 0;
-                    text-align: center;
-                    color: rgba(255, 255, 255, .4);
+                    background: transparent;
+                    position: relative;
+                    margin: 0 25px 0 0;
+                    padding: 0 5px;
+                    display: block;
+                    &:before {
+                        content: "\f0ac";
+                        font-family: FontAwesome;
+                        font-size: 18px;
+                    }
+                    span {
+                        position: absolute;
+                        top: 7px;
+                        right: -15px;
+                        background: rgba(255, 255, 255, .25);
+                        color: rgba(0, 0, 0, .5) !important;
+                        font-weight: bold !important;
+                        height: auto;
+                        line-height: normal;
+                        padding: 2px 4px;
+                        color: #FFF;
+                        border-radius: 2px;
+                        font-size: 8px;
+                    }
                 }
                 @media screen and (max-width: 900px) {
                     > a.notifications {
