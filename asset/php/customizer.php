@@ -13,30 +13,6 @@ function sc_customizer($wp_customize){
         )
     );
 
-    $wp_customize->add_section('sf_buddypress_section', array(
-        'title'          => 'Header Options',
-        'description'   => 'Change some options',
-        'theme-supports'    => '',
-        'priority'          => '10',
-        'panel'             => 'sf_panel_bp'
-    ));
-
-    $wp_customize->add_setting('sf_msg_link', array(
-        'default'   => null,
-        'transport' => 'postMessage'
-    ));
-
-    $wp_customize->add_control( 
-        new WP_Customize_Control($wp_customize, 'sf_msg_link', 
-            array(
-                'label'      => __('Show link to user messages in header?', 'sf'),
-                'section'    => 'sf_buddypress_section',
-                'settings'   => 'sf_msg_link',
-                'type'       => 'checkbox'
-            )
-        ) 
-    );
-
    $wp_customize->add_panel('sf_panel_1',
         array(
             'title'          => 'Theme Decor',
