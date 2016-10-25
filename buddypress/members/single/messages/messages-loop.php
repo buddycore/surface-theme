@@ -19,7 +19,7 @@
 								<?php bp_message_thread_avatar(array('width' => 50, 'height' => 50)); ?>
 							</div>
 							<div class="table-cell detail">
-								<h2><a href="<?php bp_message_thread_view_link(); ?>"><?php bp_message_thread_subject(); ?></a></h2>
+								<h2><a href="<?php bp_message_thread_view_link(); ?>#recent"><?php bp_message_thread_subject(); ?></a></h2>
 								<p class="from-to">
 								<?php if('sentbox' != bp_current_action()) : ?>
 										<span class="from"><?php _e('From:', 'buddypress'); ?></span> <?php bp_message_thread_from(); ?>

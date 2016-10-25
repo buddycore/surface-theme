@@ -15,17 +15,6 @@
     <?php if(class_exists('bbPress')) : ?>
     <li class="nv-forums"><a href="<?php echo bp_loggedin_user_domain(); ?>forums">Forums</a></li>
     <?php endif; ?>
-    <?php if(bp_is_active('notifications')) : ?>
-    <li class="nv-notifications"><a href="<?php echo bp_loggedin_user_domain(); ?>notifications">Notifications
-        <?php if(bp_notifications_get_unread_notification_count(bp_loggedin_user_id())) : ?>
-            <span><?php echo bp_notifications_get_unread_notification_count(bp_loggedin_user_id()); ?></span>
-        <?php endif; ?>
-        </a>
-    </li>
-    <?php endif; ?>
-    <?php if(bp_is_active('messages')) : ?>
-    <li class="nv-messages"><a href="<?php echo bp_loggedin_user_domain(); ?>messages">Messages <?php if(bp_get_total_unread_messages_count()) : ?> <span> <?php bp_total_unread_messages_count(); ?></span><?php endif; ?></a></li>
-    <?php endif; ?>
     <?php if(bp_is_active('friends')) : ?>
     <li class="nv-friends"><a href="<?php echo bp_loggedin_user_domain(); ?>friends">Friends <span><?php echo friends_get_friend_count_for_user($user_id); ?></span></a></li>
     <?php endif; ?>

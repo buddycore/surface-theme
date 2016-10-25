@@ -96,16 +96,16 @@
                     <?php get_search_form(); ?>
                 </li>
                 <?php if(is_user_logged_in()) : ?>
-                    <?php if(get_theme_mod('sf_msg_link')) : ?>
-                        <?php if(bp_get_total_unread_messages_count()) : ?>
+
+                    <?php if(bp_is_active('messages')) : ?>
                         <li class="nv-msg-notify">
                             <a href="<?php echo bp_loggedin_user_domain(); ?>messages"><?php if(bp_get_total_unread_messages_count()) : ?><span><?php bp_total_unread_messages_count(); ?></span><?php endif; ?></a>
                         </li>
-                        <?php endif; ?>
                     <?php endif; ?>
+                    
                 <li class="nv-account">
-                    <?php if(bp_is_active('notifications') && bp_notifications_get_unread_notification_count(bp_loggedin_user_id())) : ?>
-                        <a class="notifications" href="<?php echo bp_loggedin_user_domain(); ?>notifications" title="Unread Notifications"><span><?php echo bp_notifications_get_unread_notification_count(bp_loggedin_user_id()); ?></span></a>
+                    <?php if(bp_is_active('notifications')) : ?>
+                        <a class="notifications" href="<?php echo bp_loggedin_user_domain(); ?>notifications" title="Unread Notifications"><?php if(bp_notifications_get_unread_notification_count(bp_loggedin_user_id())) : ?><span><?php echo bp_notifications_get_unread_notification_count(bp_loggedin_user_id()); ?></span><?php endif; ?></a>
                     <?php endif; ?>
                     <a href="<?php echo bp_loggedin_user_domain(); ?>">
                         <?php bp_loggedin_user_avatar('width=60&height=60'); ?>

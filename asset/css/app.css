@@ -379,19 +379,15 @@ header.global nav ul.sf-header li.nv-pages.close button:before {
 }
 
 header.global nav ul.sf-header li.nv-msg-notify {
-  margin: 0 0 0 10px;
-}
-
-header.global nav ul.sf-header li.nv-account > a.notifications {
-  margin: 0 10px 0 0 !important;
+  margin-left: 10px;
 }
 
 header.global nav ul.sf-header li.nv-msg-notify a {
   background: transparent;
   position: relative;
   margin: 0;
-  padding: 0 15px 0 0;
   display: block;
+  padding: 0 10px;
 }
 
 header.global nav ul.sf-header li.nv-msg-notify a:before {
@@ -426,16 +422,15 @@ header.global nav ul.sf-header li.nv-msg-notify a span {
 }
 
 header.global nav ul.sf-header li.nv-account {
-  margin-left: 10px;
   position: relative;
 }
 
 header.global nav ul.sf-header li.nv-account > a.notifications {
   background: transparent;
   position: relative;
-  margin: 0;
-  padding: 0 15px 0 0;
+  margin: 0 10px 0 0;
   display: block;
+  padding: 0 10px;
 }
 
 header.global nav ul.sf-header li.nv-account > a.notifications:before {

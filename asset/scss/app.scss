@@ -227,23 +227,13 @@ header.global {
                 }
             } 
             li.nv-msg-notify {
-                margin: 0 0 0 10px;
-                a {
-
-                }
-            }
-            li.nv-account {
-                > a.notifications {
-                    margin: 0 10px 0 0 !important;
-                }
-            }
-            li.nv-msg-notify {
+                margin-left: 10px;
                 a {
                     background: transparent;
                     position: relative;
                     margin: 0;
-                    padding: 0 15px 0 0;
                     display: block;
+                    padding: 0 10px;
                     &:before {
                         background: url(../img/interface/messages.png) center no-repeat;
                         content: "";
@@ -275,14 +265,13 @@ header.global {
                 }
             }
             li.nv-account {
-                margin-left: 10px;
                 position: relative;
                 > a.notifications {
                     background: transparent;
                     position: relative;
-                    margin: 0;
-                    padding: 0 15px 0 0;
+                    margin: 0 10px 0 0;
                     display: block;
+                    padding: 0 10px;
                     &:before {
                         content: "\f0ac";
                         font-family: FontAwesome;
