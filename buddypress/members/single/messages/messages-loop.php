@@ -21,7 +21,7 @@
 							<div class="table-cell detail">
 								<h2><a href="<?php bp_message_thread_view_link(); ?>"><?php bp_message_thread_subject(); ?></a></h2>
 								<p class="from-to">
-								<?php if('sentbox' != bp_current_action()) : ?>sss
+								<?php if('sentbox' != bp_current_action()) : ?>
 										<span class="from"><?php _e('From:', 'buddypress'); ?></span> <?php bp_message_thread_from(); ?>
 										<?php bp_message_thread_total_and_unread_count(); ?>
 										<span class="activity"><?php bp_message_thread_last_post_date(); ?></span>
