@@ -1114,6 +1114,26 @@ div.bp-pagination div.pag-count {
   line-height: 30px;
   padding: 0 10px;
   font-weight: 400;
+  float: left;
+}
+
+div.bp-pagination div.pag-links {
+  float: right;
+}
+
+div.bp-pagination div.pag-links a, div.bp-pagination div.pag-links span {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  float: left;
+  padding: 0 10px;
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.75);
+  background: #9E9E9E;
+}
+
+div.bp-pagination div.pag-links span.current {
+  background: #BDBDBD;
 }
 
 div.padder {

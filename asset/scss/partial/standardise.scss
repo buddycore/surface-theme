@@ -280,6 +280,23 @@ div.bp-pagination {
         line-height: 30px;
         padding: 0 10px;
         font-weight: 400;
+        float: left;
+    }
+    div.pag-links {
+        float: right;
+        a, span {
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            float: left;
+            padding: 0 10px;
+            margin-left: 5px;
+            color: rgba(0, 0, 0, .75);
+            background: palette(Grey, 500);
+        }
+        span.current {
+            background: palette(Grey, 400);
+        }
     }
 }
 

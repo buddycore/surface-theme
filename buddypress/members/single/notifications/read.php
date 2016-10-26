@@ -1,4 +1,4 @@
-<?php if(bp_has_notifications()) : ?>
+<?php if(bp_has_notifications('per_page=5')) : ?>
 
 	<?php bp_get_template_part('members/single/notifications/notifications-loop'); ?>
 
