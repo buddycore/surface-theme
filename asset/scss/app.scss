@@ -96,7 +96,7 @@ header.global {
                             font-family: FontAwesome;
                         }
                     }
-                    span.toggle.close {
+                    span.toggle.sc-close {
                         &:before {
                             content: "\f106";
                         }
@@ -159,7 +159,7 @@ header.global {
                         display: block;
                     }
                 }
-                button.close {
+                button.sc-close {
                     &:before {
                         content: "\f00d";
                     }
@@ -219,7 +219,7 @@ header.global {
                     }
                 }
             }    
-            li.nv-pages.close {
+            li.nv-pages.sc-close {
                 button {
                     &:before {
                         content: "\f00d";
@@ -340,7 +340,7 @@ header.global {
                     }
                 }
             }   
-            li.nv-account.close {
+            li.nv-account.sc-close {
                 a {
                     span.toggle {
                         &:before {

@@ -243,7 +243,7 @@ header.global nav ul.sf-header li a span.toggle:before {
   font-family: FontAwesome;
 }
 
-header.global nav ul.sf-header li a span.toggle.close:before {
+header.global nav ul.sf-header li a span.toggle.sc-close:before {
   content: "\f106";
 }
 
@@ -311,7 +311,7 @@ header.global nav ul.sf-header li.search button:before {
   display: block;
 }
 
-header.global nav ul.sf-header li.search button.close:before {
+header.global nav ul.sf-header li.search button.sc-close:before {
   content: "\f00d";
 }
 
@@ -374,7 +374,7 @@ header.global nav ul.sf-header li.nv-pages button span {
   display: none;
 }
 
-header.global nav ul.sf-header li.nv-pages.close button:before {
+header.global nav ul.sf-header li.nv-pages.sc-close button:before {
   content: "\f00d";
 }
 
@@ -507,7 +507,7 @@ header.global nav ul.sf-header li.nv-account ul li.title {
   display: none;
 }
 
-header.global nav ul.sf-header li.nv-account.close a span.toggle:before {
+header.global nav ul.sf-header li.nv-account.sc-close a span.toggle:before {
   content: "\f106";
 }
 
