@@ -1481,6 +1481,8 @@ jq(document).ready( function() {
 			},
 			function(response)
 			{
+				// SC EDIT
+				location.reload();
 				if ( response[0] + response[1] === '-1' ) {
 					jq('#send-reply').prepend( response.substr( 2, response.length ) );
 				} else {

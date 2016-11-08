@@ -3624,6 +3624,10 @@ form.activity-post-form div.bpfb_actions_container div.bpfb_controls_container i
   cursor: pointer;
 }
 
+form#send-reply {
+  margin-bottom: 20px;
+}
+
 div.section-header {
   background: #FFF;
   background-size: 100%;

@@ -1,8 +1,9 @@
 <div id="message-thread">
 
 	<?php do_action('bp_before_message_thread_content'); ?>
-
-	<?php if(bp_thread_has_messages()) : ?>
+	
+	
+	<?php if(bp_thread_has_messages('order=DESC')) : ?>
 
 		<div class="title">
 
@@ -34,14 +35,6 @@
 
 		</div><!-- TITLE -->
 
-		<?php do_action('bp_before_message_thread_list'); ?>
-
-		<?php while(bp_thread_messages()) : bp_thread_the_message(); ?>
-			<?php bp_get_template_part('members/single/messages/message'); ?>
-		<?php endwhile; ?>
-
-		<?php do_action('bp_after_message_thread_list'); ?>
-
 		<?php do_action('bp_before_message_thread_reply'); ?>
 
 		<form id="send-reply" action="<?php bp_messages_form_action(); ?>" method="post" class="standard-form">
@@ -70,6 +63,14 @@
 		</form><!-- #send-reply -->
 
 		<?php do_action('bp_after_message_thread_reply'); ?>
+
+		<?php do_action('bp_before_message_thread_list'); ?>
+
+		<?php while(bp_thread_messages()) : bp_thread_the_message(); ?>
+			<?php bp_get_template_part('members/single/messages/message'); ?>
+		<?php endwhile; ?>
+
+		<?php do_action('bp_after_message_thread_list'); ?>
 
 	<?php endif; ?>
 
