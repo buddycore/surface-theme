@@ -224,7 +224,6 @@ ul#activity-stream {
                     padding: 0 10px;
                     display: block;
                     float: left;
-
                     &:before {
                         font-family: FontAwesome;
                         font-size: 14px;
@@ -233,7 +232,9 @@ ul#activity-stream {
                     }
                 }
                 a.acomment-reply {
-
+                    &:before {
+                        content: "\f0e6";
+                    }
                 }
                 a.fav {
                     &:before {

@@ -141,6 +141,16 @@ input::-ms-reveal {
   height: 0;
 }
 
+::selection {
+  background: #424242;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+::-moz-selection {
+  background: #424242;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /*
 font-family: 'Titillium Web', sans-serif;
 font-family: 'Roboto', sans-serif;
@@ -3009,6 +3019,10 @@ ul#activity-stream li div.activity-content div.activity-meta a:before {
   font-size: 14px;
   float: left;
   margin: 0 5px 0 0;
+}
+
+ul#activity-stream li div.activity-content div.activity-meta a.acomment-reply:before {
+  content: "\f0e6";
 }
 
 ul#activity-stream li div.activity-content div.activity-meta a.fav:before {
