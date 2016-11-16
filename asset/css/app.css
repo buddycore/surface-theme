@@ -2647,6 +2647,14 @@ div.navigation-tabs div.item-list-tabs ul li a span {
   color: rgba(255, 255, 255, 0.5);
 }
 
+div.navigation-tabs div.item-list-tabs ul li a:before {
+  font-weight: normal;
+  font-size: 14px;
+  font-family: FontAwesome;
+  margin-right: 10px;
+  float: left;
+}
+
 div.navigation-tabs div.item-list-tabs ul li a:hover, div.navigation-tabs div.item-list-tabs ul li a:active {
   background: #FFF;
 }
@@ -2654,6 +2662,22 @@ div.navigation-tabs div.item-list-tabs ul li a:hover, div.navigation-tabs div.it
 div.navigation-tabs div.item-list-tabs ul li.selected a {
   background: #FFF;
   display: block;
+}
+
+div.navigation-tabs div.item-list-tabs ul li#inbox-personal-li a:before {
+  content: "\f01c";
+}
+
+div.navigation-tabs div.item-list-tabs ul li#starred-personal-li a:before {
+  content: "\f005";
+}
+
+div.navigation-tabs div.item-list-tabs ul li#sentbox-personal-li a:before {
+  content: "\f1d9";
+}
+
+div.navigation-tabs div.item-list-tabs ul li#compose-personal-li a:before {
+  content: "\f044";
 }
 
 div.navigation-tabs div.item-list-tabs.filter {
@@ -4283,6 +4307,10 @@ div.messages article.message div.table {
 div.messages article.message div.table div.table-cell {
   display: table-cell;
   vertical-align: middle;
+}
+
+div.messages article.message div.table div.avatar {
+  width: 50px;
 }
 
 div.messages article.message div.table div.avatar img {

@@ -82,6 +82,13 @@ div.navigation-tabs {
                         background: palette(Grey, 800);
                         color: rgba(255, 255, 255, .5);
                     }
+                    &:before {
+                        font-weight: normal;
+                        font-size: 14px;
+                        font-family: FontAwesome;
+                        margin-right: 10px;
+                        float: left;
+                    }
                 }
                 a:hover, a:active {
                     background: #FFF;
@@ -91,6 +98,34 @@ div.navigation-tabs {
                 a {
                     background: #FFF;
                     display: block;
+                }
+            }
+            li#inbox-personal-li {
+                a {
+                    &:before {
+                        content: "\f01c";
+                    }
+                }
+            }
+            li#starred-personal-li {
+                a {
+                    &:before {
+                        content: "\f005";
+                    }
+                }
+            }
+            li#sentbox-personal-li {
+                a {
+                    &:before {
+                        content: "\f1d9";
+                    }
+                }
+            }
+            li#compose-personal-li {
+                a {
+                    &:before {
+                        content: "\f044";
+                    }
                 }
             }
         }
