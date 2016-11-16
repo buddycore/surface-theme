@@ -2805,6 +2805,29 @@ form.activity-post-form div.posting-in {
   color: rgba(0, 0, 0, 0.5);
 }
 
+form.activity-post-form div#whats-new-container {
+  display: table;
+  width: 100%;
+}
+
+form.activity-post-form div#whats-new-container div#whats-new-avatar {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 10px;
+  width: 50px;
+}
+
+form.activity-post-form div#whats-new-container div#whats-new-avatar img {
+  padding: 2px;
+  border: 1px solid #BDBDBD;
+  background: #FFF;
+}
+
+form.activity-post-form div#whats-new-container div#whats-new-content {
+  vertical-align: top;
+  display: table-cell;
+}
+
 form.activity-post-form div#whats-new-options {
   display: block !important;
   float: right;

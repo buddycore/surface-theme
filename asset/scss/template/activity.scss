@@ -25,6 +25,25 @@ form.activity-post-form {
         float: right;
         color: rgba(0, 0, 0, .5);
     }
+    div#whats-new-container {
+        display: table;
+        width: 100%;
+        div#whats-new-avatar {
+            display: table-cell;
+            vertical-align: top;
+            padding-right: 10px;
+            width: 50px;
+            img {
+                padding: 2px;
+                border: 1px solid palette(Grey, 400);
+                background: #FFF;
+            }
+        }
+        div#whats-new-content {
+            vertical-align: top;
+            display: table-cell;
+        }
+    }
     div#whats-new-options {
         display: block !important;
         float: right;
