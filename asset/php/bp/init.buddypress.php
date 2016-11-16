@@ -99,19 +99,23 @@ function sc_bp_default_group_avatar($avatar) {
 
 add_filter('bp_get_group_avatar', 'sc_bp_default_group_avatar');
 
-// function sc_bp_default_user_avatar($image) {
+if(get_theme_mod('sf_bp_members_gravatar')) :
 
-//    $default = get_bloginfo('template_directory') .'/asset/img/default/member.png';
+    function sc_bp_default_user_avatar($image) {
 
-//     if($image && strpos($image, "gravatar.com")) :
+       $default = get_bloginfo('template_directory') .'/asset/img/default/member.png';
 
-//         return '<img class="avatar" src="' . $default . '" alt="avatar">';
+        if($image && strpos($image, "gravatar.com")) :
 
-//     else :
+            return '<img class="avatar" src="' . $default . '" alt="avatar">';
 
-//         return $image;
+        else :
 
-//     endif;
+            return $image;
 
-// }
-// add_filter('bp_core_fetch_avatar', 'sc_bp_default_user_avatar');
+        endif;
+
+    }
+    add_filter('bp_core_fetch_avatar', 'sc_bp_default_user_avatar');
+
+endif;

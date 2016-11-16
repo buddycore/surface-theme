@@ -13,6 +13,31 @@ function sc_customizer($wp_customize){
         )
     );
 
+    // LOGO SECTION
+    $wp_customize->add_section('sf_members_section', array(
+        'title'          => 'Members Config',
+        'description'   => 'Configure the Members component',
+        'theme-supports'    => '',
+        'priority'          => '10',
+        'panel'             => 'sf_panel_bp'
+    ));
+
+    $wp_customize->add_setting('sf_bp_members_gravatar', array(
+        'default'   => null,
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control( 
+        new WP_Customize_Control($wp_customize, 'sf_bp_members_gravatar', 
+            array(
+                'label'      => __('Use default avatar for members?', 'sf'),
+                'section'    => 'sf_members_section',
+                'settings'   => 'sf_bp_members_gravatar',
+                'type'       => 'checkbox'
+            )
+        ) 
+    );
+
    $wp_customize->add_panel('sf_panel_1',
         array(
             'title'          => 'Theme Decor',
