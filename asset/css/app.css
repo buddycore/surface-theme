@@ -643,6 +643,8 @@ main {
   width: 100%;
   clear: both;
   overflow-y: hidden;
+  z-index: 2;
+  position: relative;
 }
 
 main h1, main h2, main h3, main h4, main h5, main h6 {
@@ -683,6 +685,7 @@ footer.global {
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 1;
 }
 
 footer.global nav {
@@ -2594,6 +2597,10 @@ ul.button-nav li a {
   background: #E0E0E0;
 }
 
+div.navigation-tabs-responsive {
+  display: none;
+}
+
 div.navigation-tabs {
   height: 40px;
   background: #BDBDBD;
@@ -2702,46 +2709,111 @@ div.navigation-tabs div.item-list-tabs.filter ul li select {
 
 @media screen and (max-width: 700px) {
   div.navigation-tabs {
-    height: auto;
-    background: transparent;
+    display: none;
   }
-  div.navigation-tabs div.item-list-tabs {
-    float: none;
-  }
-  div.navigation-tabs div.item-list-tabs ul li {
-    float: none;
-    width: 100%;
-  }
-  div.navigation-tabs div.item-list-tabs ul li a {
+  div.navigation-tabs-responsive {
+    display: block;
     height: 40px;
-    line-height: 40px;
-    width: 100%;
-    padding: 0 10px;
-    background: #BDBDBD;
+    background: #FFF;
+    margin-bottom: 20px;
   }
-  div.navigation-tabs div.item-list-tabs ul li a span {
-    margin: 10px 0;
-  }
-  div.navigation-tabs div.item-list-tabs ul li.loading a {
-    background: #FFF url(../img/interface/rolling.gif) no-repeat 10px 14px !important;
-  }
-  div.navigation-tabs div.item-list-tabs.filter {
-    float: none;
-    padding: 0;
-    background: #E0E0E0;
-    margin-top: 20px;
+  div.navigation-tabs-responsive div.item-list-tabs {
     float: left;
-    width: 100%;
+    width: 20%;
   }
-  div.navigation-tabs div.item-list-tabs.filter ul li {
-    float: none;
-    padding: 0;
+  div.navigation-tabs-responsive div.item-list-tabs ul li {
+    position: relative;
     margin: 0;
   }
-  div.navigation-tabs div.item-list-tabs.filter ul li select {
+  div.navigation-tabs-responsive div.item-list-tabs ul li button {
+    height: 40px;
     width: 100%;
-    height: auto;
-    padding: 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    background: #9E9E9E;
+    color: #616161;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs ul li button span {
+    display: none;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs ul li button:before {
+    content: "\f0b0";
+    font-family: FontAwesome;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs ul li button.fl-shown:before {
+    content: "\f00d";
+  }
+  div.navigation-tabs-responsive div.item-list-tabs ul li ul.filternav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background: #FFF;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: none;
+    z-index: 10;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs ul li ul.filternav li:last-child {
+    margin-bottom: 0;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs ul li ul.filternav li a {
+    color: #616161;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    border-left: 4px solid #9E9E9E;
+    display: block;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs ul li ul.filternav li a span {
+    text-align: center;
+    float: right;
+    margin: 7.5 0 0 0;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background: lightgray;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs ul li ul.filternav li.loading a {
+    transition: none;
+    background: url(../img/interface/loader.gif) no-repeat 10px center;
+    padding-left: 35px;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs.filter {
+    float: right;
+    line-height: 1;
+    width: 80%;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs.filter ul li {
+    margin: 0;
+    float: left;
+    width: 100%;
+    padding-left: 5px;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs.filter ul li label {
+    display: none;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs.filter ul li select {
+    border: none;
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 0;
+    background: #FFF;
+    transition: .2s linear border, .2s linear background;
+    outline: none !important;
+    color: #616161;
+    border: 1px solid #FFF !important;
+  }
+  div.navigation-tabs-responsive div.item-list-tabs.filter ul li select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
   }
 }
 

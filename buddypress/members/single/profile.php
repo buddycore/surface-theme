@@ -6,6 +6,18 @@
 		</ul>
 	</div><!-- .item-list-tabs -->
 </div><!-- NAVIGATIoN TABS -->
+
+<div class="navigation-tabs-responsive">
+	<div class="item-list-tabs no-ajax" id="subnav" role="navigation">
+		<ul>
+			<li><button class="filter-toggle"><span>Toggle Menu</span></button>
+				<ul class="filternav">
+					<?php bp_get_options_nav(); ?>
+				</ul>
+			</li>
+		</ul>
+	</div><!-- ITEM LIST TABS -->
+</div><!-- RESPoNSIVE NAV -->
 <?php endif; ?>
 <?php do_action('bp_before_profile_content'); ?>
 

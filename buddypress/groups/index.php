@@ -47,6 +47,39 @@
 
 		</div><!-- NAVIGATIoN TABS -->
 
+		<div class="navigation-tabs-responsive">
+			<div class="item-list-tabs" id="subnav" role="navigation">
+				<ul>
+					<li><button class="filter-toggle"><span>Toggle Menu</span></button>
+						<ul class="filternav">
+							<li class="selected" id="groups-all"><a href="<?php bp_groups_directory_permalink(); ?>"><?php printf(__('All Groups %s', 'buddypress'), '<span>' . bp_get_total_group_count() . '</span>'); ?></a></li>
+
+							<?php if(is_user_logged_in() && bp_get_total_group_count_for_user(bp_loggedin_user_id())) : ?>
+								<li id="groups-personal"><a href="<?php echo bp_loggedin_user_domain() . bp_get_groups_slug() . '/my-groups/'; ?>"><?php printf(__('My Groups %s', 'buddypress'), '<span>' . bp_get_total_group_count_for_user(bp_loggedin_user_id()) . '</span>'); ?></a></li>
+							<?php endif; ?>
+							
+							<?php do_action('bp_groups_directory_group_filter'); ?>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- ITEM LIST TABS -->
+
+			<div class="item-list-tabs filter" id="subnav" role="navigation">
+				<ul>
+					<?php do_action('bp_groups_directory_group_types'); ?>
+					<li id="groups-order-select" class="last filter">
+						<select id="groups-order-by">
+							<option value="active"><?php _e('Last Active', 'buddypress'); ?></option>
+							<option value="popular"><?php _e('Most Members', 'buddypress'); ?></option>
+							<option value="newest"><?php _e('Newly Created', 'buddypress'); ?></option>
+							<option value="alphabetical"><?php _e('Alphabetical', 'buddypress'); ?></option>
+							<?php do_action('bp_groups_directory_order_options'); ?>
+						</select>
+					</li>
+				</ul>
+			</div><!-- ITEM LIST TABS -->	
+		</div><!-- RESPoNSIVE NAV -->
+
 		<div id="groups-dir-list" class="groups dir-list"><?php bp_get_template_part('groups/groups-loop'); ?></div><!-- GROUPS DIRECTORY -->
 
 		<?php do_action('bp_directory_groups_content'); ?>

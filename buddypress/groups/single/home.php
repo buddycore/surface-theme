@@ -44,6 +44,33 @@
 			<?php endif; ?>
 		</div><!-- ITEM TABS -->
 
+		<div class="navigation-tabs-responsive">
+			<div class="item-list-tabs no-ajax" id="object-nav" role="navigation">
+				<ul>
+					<li><button class="filter-toggle"><span>Toggle Menu</span></button>
+						<ul class="filternav">
+							<?php bp_get_options_nav(); ?>
+							<?php do_action('bp_group_options_nav'); ?>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- ITEM LIST TABS -->
+
+			<?php if(bp_is_group_activity()) : ?>
+			<div class="item-list-tabs filter">
+				<ul>
+					<li id="activity-filter-select" class="last">
+						<select id="activity-filter-by">
+							<option value="-1"><?php _e('Show: Everything', 'buddypress'); ?></option>
+							<?php bp_activity_show_filters(); ?>
+							<?php do_action('bp_member_activity_filter_options'); ?>
+						</select>
+					</li>
+				</ul>
+			</div>
+			<?php endif; ?>
+		</div><!-- RESPoNSIVE NAV -->
+
 		<div id="item-body">
 
 			<?php do_action('bp_before_group_body'); ?>

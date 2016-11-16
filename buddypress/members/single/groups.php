@@ -23,6 +23,36 @@
 		</ul>
 	</div>
 </div><!-- NAVIGATIoN TABS -->
+
+<div class="navigation-tabs-responsive">
+	<div class="item-list-tabs no-ajax" id="subnav" role="navigation">
+		<ul>
+			<li><button class="filter-toggle"><span>Toggle Menu</span></button>
+				<ul class="filternav">
+					<?php bp_get_options_nav(); ?>
+				</ul>
+			</li>
+		</ul>
+	</div><!-- ITEM LIST TABS -->
+
+	<div class="item-list-tabs no-ajax filter" id="subnav" role="navigation">
+		<ul>
+			<?php if(!bp_is_current_action('invites')) : ?>
+
+				<li id="groups-order-select" class="last filter">
+					<select id="groups-order-by">
+						<option value="active"><?php _e('Last Active', 'buddypress'); ?></option>
+						<option value="popular"><?php _e('Most Members', 'buddypress'); ?></option>
+						<option value="newest"><?php _e('Newly Created', 'buddypress'); ?></option>
+						<option value="alphabetical"><?php _e('Alphabetical', 'buddypress'); ?></option>
+						<?php do_action('bp_member_group_order_options'); ?>
+					</select>
+				</li>
+
+			<?php endif; ?>
+		</ul>
+	</div><!-- ITEM LIST TABS -->	
+</div><!-- RESPoNSIVE NAV -->
 <?php endif; ?>
 <?php
 switch(bp_current_action()) :

@@ -1,5 +1,38 @@
 $(document).ready(function(){   
 
+    $('button.filter-toggle').on('click', function(e){
+
+        e.stopPropagation();
+        e.preventDefault();
+
+        if($(this).hasClass('fl-shown')) {
+            $(this).removeClass('fl-shown').next('ul.filternav').slideUp(200);
+        }
+        else {
+            $(this).addClass('fl-shown').next('ul.filternav').slideDown(200);
+        }        
+
+    });
+
+    // DO WINDOW SCROLL ALSO
+
+    $('html').on('click', function(e){
+
+        $('button.filter-toggle').removeClass('fl-shown');
+        $('ul.filternav').slideUp(200);
+
+        $('button.filter-toggle').removeClass('fl-shown');
+        $('ul.filternav').slideUp(200);
+
+        $('ul.primary li').removeClass('nv-shown');
+        $('ul.primary li a span').removeClass('nv-close');
+
+        $('nav.filter ul li a span').removeClass('nv-close');
+        $('nav.filter ul li a span').removeClass('nv-close');
+
+        $('ul.sub-menu').slideUp(200);
+
+    });
 
     // TABS | SIDEBAR
     $('div.tabs, div.inner-tabs, div.widget-tabs').tabs();

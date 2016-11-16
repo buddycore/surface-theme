@@ -34,6 +34,10 @@ ul.button-nav {
     }
 }
 
+div.navigation-tabs-responsive {
+    display: none;
+}
+
 div.navigation-tabs {
     height: 40px;
     background: palette(Grey, 400);
@@ -158,48 +162,117 @@ div.navigation-tabs {
         
     }
     div.navigation-tabs {
-        height: auto;
-        background: transparent;
+        display: none;
+    }
+    div.navigation-tabs-responsive {
+        display: block;
+        height: 40px;
+        background: #FFF;
+        margin-bottom: 20px;
         div.item-list-tabs {
-            float: none;
+            float: left;
+            width: 20%;
             ul {
                 li {
-                    float: none;
-                    width: 100%;
-                    a {
+                    position: relative;
+                    margin: 0;
+                    button {
                         height: 40px;
-                        line-height: 40px;
                         width: 100%;
-                        padding: 0 10px;
-                        background: palette(Grey, 400);
+                        text-align: center;
+                        line-height: 40px;
+                        font-size: 14px;
+                        background: palette(Grey, 500);
+                        color: palette(Grey, 700);
                         span {
-                            margin: 10px 0;
+                            display: none;
+                        }
+                        &:before {
+                            content: "\f0b0";
+                            font-family: FontAwesome;
+                            font-size: 14px;
+                            font-weight: normal;
                         }
                     }
-                }
-                li.loading {
-                    a {
-                        background: #FFF url(../img/interface/rolling.gif) no-repeat 10px 14px !important;
+                    button.fl-shown {
+                        &:before {
+                            content: "\f00d";
+                        }
+                    }
+                    ul.filternav {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 200px;
+                        background: #FFF;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        display: none;
+                        z-index: 10;
+                        li {
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            a {
+                                color: palette(Grey, 700);
+                                padding: 0 10px;
+                                height: 40px;
+                                line-height: 40px;
+                                border-left: 4px solid palette(Grey, 500);
+                                display: block;
+                                span {
+                                    text-align: center;
+                                    float: right;
+                                    margin: 7.5 0 0 0;
+                                    width: 25px;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    background: darken(palette(Grey, 300), 5%);
+                                }
+                            }
+                        }
+                        li.loading {
+                            a {
+                                transition: none;
+                                background: url(../img/interface/loader.gif) no-repeat 10px center;
+                                padding-left: 35px;
+                            }
+                        }
                     }
                 }
             }
         }
         div.item-list-tabs.filter {
-            float: none;
-            padding: 0;
-            background: palette(Grey, 300);
-            margin-top: 20px;
-            float: left;
-            width: 100%;
+            float: right;
+            line-height: 1;
+            width: 80%;
             ul {
                 li {
-                    float: none;
-                    padding: 0;
                     margin: 0;
+                    float: left;
+                    width: 100%;
+                    padding-left: 5px;
+                    label {
+                        display: none;
+                    }
                     select {
+                        border: none;
                         width: 100%;
-                        height: auto;
-                        padding: 10px;
+                        height: 40px;
+                        line-height: 28px;
+                        font-size: 10px;
+                        font-weight: 700;
+                        margin-bottom: 0;
+                        background: #FFF;
+                        transition: .2s linear border, .2s linear background;
+                        outline: none !important;
+                        color: palette(Grey, 700);
+                        border: 1px solid #FFF !important;
+                    }
+                    select:-moz-focusring { 
+                        color: transparent;
+                        text-shadow: 0 0 0 #000; 
                     }
                 }
             }
