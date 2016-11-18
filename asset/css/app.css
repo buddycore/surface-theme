@@ -2738,7 +2738,7 @@ div.navigation-tabs div.item-list-tabs.filter ul li select {
     display: none;
   }
   div.navigation-tabs-responsive div.item-list-tabs ul li button:before {
-    content: "\f0b0";
+    content: "\f0c9";
     font-family: FontAwesome;
     font-size: 14px;
     font-weight: normal;
