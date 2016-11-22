@@ -6,7 +6,7 @@
 font-family: 'Titillium Web', sans-serif;
 font-family: 'Roboto', sans-serif;
 */
-@import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import "partial/fa/scss/font-awesome.scss";
 
 a, img {
     transition: .2s linear color, .2s linear opacity;
